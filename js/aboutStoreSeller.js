@@ -44,121 +44,138 @@ function adjustIntroBoxHeight() {
 window.addEventListener('load', adjustIntroBoxHeight)
 window.addEventListener('resize', adjustIntroBoxHeight)
 
-// 가게 사진 하단 찜하기
-window.addEventListener('load', function () {
-    const heartOutIcon = document.querySelector('.heartOut img')
+// // 가게 사진 하단 찜하기
+// window.addEventListener('load', function () {
+//     const heartOutIcon = document.querySelector('.heartOut img')
 
-    const fullHeart = 'svg/icon _heart_.svg'
-    const originHeart = 'svg/icon _heart outline_.svg'
+//     const fullHeart = 'svg/icon _heart_.svg'
+//     const originHeart = 'svg/icon _heart outline_.svg'
 
-    let isFullHeart = false
+//     let isFullHeart = false
 
-    heartOutIcon.addEventListener('click', function () {
-        if (isFullHeart) {
-            heartOutIcon.src = originHeart
-            heartOutIcon.alt = 'Heart Outline Image'
-        } else {
-            heartOutIcon.src = fullHeart
-            heartOutIcon.alt = 'Heart Image'
-        }
+//     heartOutIcon.addEventListener('click', function () {
+//         if (isFullHeart) {
+//             heartOutIcon.src = originHeart
+//             heartOutIcon.alt = 'Heart Outline Image'
+//         } else {
+//             heartOutIcon.src = fullHeart
+//             heartOutIcon.alt = 'Heart Image'
+//         }
 
-        isFullHeart = !isFullHeart
-    })
+//         isFullHeart = !isFullHeart
+//     })
 
-    $.ajax({
-        url: host + `/mine/${userIdx}/store/${window.postId}`,
-        method: 'GET',
-        success: function (data) {
-            // 서버에서 받아온 찜하기 여부 값으로 isFullHeart 업데이트
-            isFullHeart = data.isFullHeart
-        },
-        error: function () {
-            // 에러 처리
-            console.error('찜하기 여부를 불러오는 데 실패했습니다.')
-        },
-    })
+//     $.ajax({
+//         url: host + `/mine/${userIdx}/store/${window.postId}`,
+//         method: 'GET',
+//         success: function (data) {
+//             // 서버에서 받아온 찜하기 여부 값으로 isFullHeart 업데이트
+//             isFullHeart = data.isFullHeart
+//         },
+//         error: function () {
+//             // 에러 처리
+//             console.error('찜하기 여부를 불러오는 데 실패했습니다.')
+//         },
+//     })
+// })
+const heartCountElement = $('#HeartCount')ㄴ
+
+$.ajax({
+    url: host + `/mine/store/${window.postId}`,
+    method: 'GET',
+    contentType: 'application/json',
+    data: JSON.stringify({
+        postid: 1, // 게시물 ID
+        heartnum: $('#heartnum').val(),
+    }),
+    success: function (data) {
+        heartCountElement.text(data.heartCount) // 서버에서 받은 찜하기 수로 화면 업데이트
+    },
+    error: function () {
+        alert('찜하기 수를 받아오지 않았습니다.')
+    },
 })
 
-$('#Heartnum').click(function () {
-    const heartCountElement = $('#HeartCount')
+// $('#Heartnum').click(function () {
+//     const heartCountElement = $('#HeartCount')
 
-    // 찜하기 여부 서버 요청 (GET 요청 등)
-    $.ajax({
-        url: host + `/mine/${userIdx}/store/${window.postId}`,
-        method: 'GET',
-        success: function (data) {
-            isFullHeart = data.isFullHeart // 서버에서 받아온 찜하기 여부 값으로 업데이트
+//     // 찜하기 여부 서버 요청 (GET 요청 등)
+//     $.ajax({
+//         url: host + `/mine/${userIdx}/store/${window.postId}`,
+//         method: 'GET',
+//         success: function (data) {
+//             isFullHeart = data.isFullHeart // 서버에서 받아온 찜하기 여부 값으로 업데이트
 
-            if (!isFullHeart) {
-                $.ajax({
-                    url:
-                        host +
-                        `/mine/${userIdx}/store/${window.postId}` +
-                        window.postId,
-                    method: 'POST',
-                    contentType: 'application/json',
-                    data: JSON.stringify({
-                        postid: 1, // 게시물 ID
-                        haartnum: $('#Heartnum').val(),
-                    }),
-                    success: function (data) {
-                        $.ajax({
-                            url: host + `/mine/store/${window.postId}`,
-                            method: 'GET',
-                            contentType: 'application/json',
-                            data: JSON.stringify({
-                                postid: 1, // 게시물 ID
-                                heartnum: $('#heartnum').val(),
-                            }),
-                            success: function (data) {
-                                heartCountElement.text(data.heartCount) // 서버에서 받은 찜하기 수로 화면 업데이트
-                            },
-                            error: function () {
-                                alert('찜하기 수를 받아오지 않았습니다.')
-                            },
-                        })
-                    },
-                    error: function () {
-                        alert('찜하기가 입력되지 않았습니다.')
-                    },
-                })
-            } else {
-                $.ajax({
-                    url: host + `/mine/${userIdx}/store/${window.postId}`,
-                    method: 'DELETE',
-                    contentType: 'application/json',
-                    data: JSON.stringify({
-                        postid: 1, // 게시물 ID
-                        goodnum: $('#Heartnum').val(),
-                    }),
-                    success: function (data) {
-                        $.ajax({
-                            url: host + `/mine/store/${window.postId}`,
-                            method: 'GET',
-                            contentType: 'application/json',
-                            data: JSON.stringify({
-                                postid: 1, // 게시물 ID
-                                heartnum: $('#heartnum').val(),
-                            }),
-                            success: function (data) {
-                                heartCountElement.text(data.heartCount) // 서버에서 받은 찜하기 수로 화면 업데이트
-                            },
-                            error: function () {
-                                alert('찜하기 수를 받아오지 않았습니다.')
-                            },
-                        })
-                    },
-                    error: function () {
-                        alert('찜하기 삭제에 실패했습니다.')
-                    },
-                })
-            }
-        },
-        error: function () {
-            console.error('찜하기 여부를 불러오는 데 실패했습니다.')
-        },
-    })
-})
+//             if (!isFullHeart) {
+//                 $.ajax({
+//                     url:
+//                         host +
+//                         `/mine/${userIdx}/store/${window.postId}` +
+//                         window.postId,
+//                     method: 'POST',
+//                     contentType: 'application/json',
+//                     data: JSON.stringify({
+//                         postid: 1, // 게시물 ID
+//                         haartnum: $('#Heartnum').val(),
+//                     }),
+//                     success: function (data) {
+//                         $.ajax({
+//                             url: host + `/mine/store/${window.postId}`,
+//                             method: 'GET',
+//                             contentType: 'application/json',
+//                             data: JSON.stringify({
+//                                 postid: 1, // 게시물 ID
+//                                 heartnum: $('#heartnum').val(),
+//                             }),
+//                             success: function (data) {
+//                                 heartCountElement.text(data.heartCount) // 서버에서 받은 찜하기 수로 화면 업데이트
+//                             },
+//                             error: function () {
+//                                 alert('찜하기 수를 받아오지 않았습니다.')
+//                             },
+//                         })
+//                     },
+//                     error: function () {
+//                         alert('찜하기가 입력되지 않았습니다.')
+//                     },
+//                 })
+//             } else {
+//                 $.ajax({
+//                     url: host + `/mine/${userIdx}/store/${window.postId}`,
+//                     method: 'DELETE',
+//                     contentType: 'application/json',
+//                     data: JSON.stringify({
+//                         postid: 1, // 게시물 ID
+//                         goodnum: $('#Heartnum').val(),
+//                     }),
+//                     success: function (data) {
+//                         $.ajax({
+//                             url: host + `/mine/store/${window.postId}`,
+//                             method: 'GET',
+//                             contentType: 'application/json',
+//                             data: JSON.stringify({
+//                                 postid: 1, // 게시물 ID
+//                                 heartnum: $('#heartnum').val(),
+//                             }),
+//                             success: function (data) {
+//                                 heartCountElement.text(data.heartCount) // 서버에서 받은 찜하기 수로 화면 업데이트
+//                             },
+//                             error: function () {
+//                                 alert('찜하기 수를 받아오지 않았습니다.')
+//                             },
+//                         })
+//                     },
+//                     error: function () {
+//                         alert('찜하기 삭제에 실패했습니다.')
+//                     },
+//                 })
+//             }
+//         },
+//         error: function () {
+//             console.error('찜하기 여부를 불러오는 데 실패했습니다.')
+//         },
+//     })
+// })
 
 // 해시태그 길이 조정
 const hashtagBox = document.querySelector('.HashtagBox h3')

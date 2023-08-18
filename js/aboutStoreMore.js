@@ -1,4 +1,6 @@
 var userIdx = 1
+var token = localStorage.getItem('token')
+var host = 'http://43.200.4.52:8080'
 // 가게 대표사진
 window.addEventListener('load', function () {
     const storePhotoElement = document.querySelector('#storePhoto img')
@@ -349,16 +351,41 @@ function createButton(number) {
     return button
 }
 
+/*
 window.addEventListener('load', function () {
     fetchAndDisplayReviews()
-})
+}) */
 
 // 페이지 이동
 function modifyButton() {
     window.location.href = 'makeReivew.html'
 }
 
-// 더미변수 확인
+function generateStarRating(rating) {
+    const fullStarIcon = 'svg/icon _star_.svg'
+
+    const starRatingContainer = document.createElement('div')
+    starRatingContainer.classList.add('star-rating')
+
+    const fullStars = Math.floor(rating)
+
+    for (let i = 0; i < 5; i++) {
+        const starImage = document.createElement('img')
+        starImage.src = i < fullStars ? fullStarIcon : ''
+        starImage.alt = ''
+
+        if (i < fullStars) {
+            starImage.classList.add('filled')
+        } else {
+            starImage.classList.add('empty')
+        }
+
+        starRatingContainer.appendChild(starImage)
+    }
+
+    return starRatingContainer
+}
+
 const reviews = [
     {
         storeIdx: 1,
@@ -404,10 +431,10 @@ function addReview(review) {
     const reviewElement = document.createElement('div')
     reviewElement.classList.add('review')
 
-    const profilePicture = document.createElement('img')
-    profilePicture.src = review.review.profilePictureUrl
-    profilePicture.alt = 'Profile Picture'
-    profilePicture.classList.add('profile-picture')
+    // const profilePicture = document.createElement('img')
+    // profilePicture.src = review.review.profilePictureUrl
+    // profilePicture.alt = 'Profile Picture'
+    // profilePicture.classList.add('profile-picture')
 
     const nicknameElement = document.createElement('h3')
     nicknameElement.textContent = review.review.nickname
@@ -438,8 +465,9 @@ function addReview(review) {
 function moveToB() {
     window.location.href = 'aboutStoreMore.html' // b.html로 이동
 }
-
+/*
 document.getElementById('MoreButton').addEventListener('click', moveToB)
+*/
 
 function fetchReviews(storeIdx) {
     $.ajax({
@@ -466,10 +494,10 @@ function displayReviews(reviews) {
         const reviewElement = document.createElement('div')
         reviewElement.classList.add('review')
 
-        const profilePicture = document.createElement('img')
-        profilePicture.src = review.profilePictureUrl
-        profilePicture.alt = 'Profile Picture'
-        profilePicture.classList.add('profile-picture')
+        // const profilePicture = document.createElement('img')
+        // profilePicture.src = review.profilePictureUrl
+        // profilePicture.alt = 'Profile Picture'
+        // profilePicture.classList.add('profile-picture')
 
         const nicknameElement = document.createElement('h3')
         nicknameElement.textContent = review.reviewer
@@ -511,3 +539,5 @@ function initialize() {
 
 // 페이지 로드 시 초기화 함수 실행
 window.addEventListener('load', initialize)
+
+console.log(displayReviews(reviews))

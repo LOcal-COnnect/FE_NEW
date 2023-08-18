@@ -1,5 +1,6 @@
-var host = 'localhost:3000'
-var userIdx = 1
+var token = localStorage.getItem('token')
+var host = '43.200.4.52:8080'
+// var userIdx = 1
 
 window.onload = function () {
     var urlParams = new URLSearchParams(window.location.search)
@@ -25,7 +26,7 @@ image.addEventListener('click', () => {
 
     // 좋아요 여부 서버 요청 (GET 요청 등)
     $.ajax({
-        url: host + `/like/${userIdx}/promotion/${window.postId}`,
+        url: host + `/like/${userIdx}/promotion/${promotionIdx}`,
         method: 'GET',
         success: function (data) {
             // 서버에서 받아온 좋아요 여부 값으로 isClicked 업데이트
@@ -44,7 +45,7 @@ $('#goodnum').click(function () {
 
     // 좋아요 여부 서버 요청 (GET 요청 등)
     $.ajax({
-        url: host + `/like/${userIdx}/promotion/${window.postId}`,
+        url: host + `/like/${userIdx}/promotion/${promotionIdx}`,
         method: 'GET',
         success: function (data) {
             isClicked = data.isLiked // 서버에서 받아온 좋아요 여부 값으로 업데이트
@@ -53,7 +54,7 @@ $('#goodnum').click(function () {
                 $.ajax({
                     url:
                         host +
-                        `/like/${window.userId}/promotion/${window.postId}`,
+                        `/like/${userIdx}/promotion/${promotionIdx}`,
                     method: 'POST',
                     contentType: 'application/json',
                     data: JSON.stringify({
@@ -62,7 +63,7 @@ $('#goodnum').click(function () {
                     }),
                     success: function (data) {
                         $.ajax({
-                            url: host + `/like/promotion/${window.postId}`,
+                            url: host + `/like/promotion/${promotionIdx}`,
                             method: 'GET',
                             contentType: 'application/json',
                             data: JSON.stringify({
@@ -85,7 +86,7 @@ $('#goodnum').click(function () {
                 $.ajax({
                     url:
                         host +
-                        `/like/${window.userId}/promotion/${window.postId}`,
+                        `/like/${userIdx}/promotion/${promotionIdx}`,
                     method: 'DELETE',
                     contentType: 'application/json',
                     data: JSON.stringify({
@@ -94,7 +95,7 @@ $('#goodnum').click(function () {
                     }),
                     success: function (data) {
                         $.ajax({
-                            url: host + `/like/promotion/${window.postId}`,
+                            url: host + `/like/promotion/${promotionIdx}`,
                             method: 'GET',
                             contentType: 'application/json',
                             data: JSON.stringify({
