@@ -1,5 +1,4 @@
 var userIdx = 1
-/*
 // 가게 대표사진
 window.addEventListener('load', function () {
     const storePhotoElement = document.querySelector('#storePhoto img')
@@ -15,7 +14,6 @@ window.addEventListener('load', function () {
             console.error('Failed to fetch the image:', error)
         })
 })
-*/
 
 // 가게 소개 박스
 const introBox = document.querySelector('.introBox')
@@ -160,14 +158,15 @@ function adjustHashtagBoxSize() {
 window.addEventListener('load', adjustHashtagBoxSize)
 window.addEventListener('resize', adjustHashtagBoxSize)
 
+/*
 // 리뷰 확인
 const reviews = [
     {
         profilePictureUrl: 'svg/profile.svg',
-        nickname: 'User4',
-        rating: 5,
-        date: '2023.07.15',
-        comment: '맛있다 \n A+',
+        nickname: 'User4', ---> reviewer
+        rating: 5, ---> reviewStar
+        date: '2023.07.15', ---> createAt
+        comment: '맛있다 \n A+' ---> reviewContent
         photo: 'svg/storePhoto.svg',
     },
     {
@@ -266,6 +265,7 @@ function addReview(review) {
 for (let i = reviews.length - 1; i >= Math.max(reviews.length - 3, 0); i--) {
     addReview(reviews[i])
 }
+*/
 
 // 게시판 페이지 번호
 window.addEventListener('DOMContentLoaded', (event) => {
@@ -358,25 +358,99 @@ function modifyButton() {
     window.location.href = 'makeReivew.html'
 }
 
-// 리뷰 미리 보기 ajax
-const storeIdx = 1
+// 더미변수 확인
+const reviews = [
+    {
+        storeIdx: 1,
+        storeName: '강남구고기짱',
+        reviewer: 'test',
+        review: {
+            createdAt: '2023-08-17T01:27:41.029339',
+            updatedAt: null,
+            reviewIdx: 1,
+            reviewContent: 'test',
+            reviewStar: 3,
+        },
+    },
+    {
+        storeIdx: 1,
+        storeName: '강남구고기짱',
+        reviewer: 'test',
+        review: {
+            createdAt: '2023-08-17T01:27:50.478057',
+            updatedAt: null,
+            reviewIdx: 2,
+            reviewContent: '쵝오',
+            reviewStar: 4,
+        },
+    },
+    {
+        storeIdx: 1,
+        storeName: '강남구고기짱',
+        reviewer: 'asd',
+        review: {
+            createdAt: '2023-08-17T01:30:45.856244',
+            updatedAt: null,
+            reviewIdx: 3,
+            reviewContent: '별로',
+            reviewStar: 1,
+        },
+    },
+]
 
-var token = localStorage.getItem('token')
+function addReview(review) {
+    const reviewBox = document.querySelector('.review-box')
+
+    const reviewElement = document.createElement('div')
+    reviewElement.classList.add('review')
+
+    const profilePicture = document.createElement('img')
+    profilePicture.src = review.review.profilePictureUrl
+    profilePicture.alt = 'Profile Picture'
+    profilePicture.classList.add('profile-picture')
+
+    const nicknameElement = document.createElement('h3')
+    nicknameElement.textContent = review.review.nickname
+    nicknameElement.classList.add('nickname')
+
+    const ratingElement = generateStarRating(review.review.rating)
+    ratingElement.classList.add('star-rating')
+
+    const commentElement = document.createElement('p')
+    commentElement.textContent = review.review.comment
+    commentElement.innerHTML = review.review.comment.replace(/\n/g, '<br>')
+    commentElement.classList.add('comment')
+
+    const dateElement = document.createElement('span')
+    dateElement.textContent = review.review.date
+    dateElement.classList.add('date')
+
+    // reviewElement.appendChild(profilePicture)
+    reviewElement.appendChild(nicknameElement)
+    reviewElement.appendChild(ratingElement)
+    reviewElement.appendChild(commentElement)
+    reviewElement.appendChild(dateElement)
+
+    reviewBox.appendChild(reviewElement)
+}
+
+// 더보기 이동
+function moveToB() {
+    window.location.href = 'aboutStoreMore.html' // b.html로 이동
+}
+
+document.getElementById('MoreButton').addEventListener('click', moveToB)
+
 function fetchReviews(storeIdx) {
     $.ajax({
-        url: `/reviews/stores/${storeIdx}`,
+        url: host + `/reviews/stores/${storeIdx}`,
         type: 'GET',
         headers: {
             'Content-Type': 'application/json',
             Authorization: 'Bearer ' + token,
         },
         success: function (response) {
-            if (response.code === 200) {
-                const reviews = response.data
-                displayReviews(reviews)
-            } else {
-                console.error('리뷰 목록 가져오기 실패:', response.message)
-            }
+            displayReviews(response)
         },
         error: function (xhr, status, error) {
             console.log('리뷰 목록 가져오기 오류:', error)
@@ -398,33 +472,41 @@ function displayReviews(reviews) {
         profilePicture.classList.add('profile-picture')
 
         const nicknameElement = document.createElement('h3')
-        nicknameElement.textContent = review.nickname
+        nicknameElement.textContent = review.reviewer
         nicknameElement.classList.add('nickname')
 
-        const ratingElement = generateStarRating(review.rating)
+        const ratingElement = generateStarRating(review.review.reviewStar)
         ratingElement.classList.add('star-rating')
 
         const commentElement = document.createElement('p')
-        commentElement.innerHTML = review.comment.replace(/\n/g, '<br>')
+        commentElement.innerHTML = review.review.reviewContent.replace(
+            /\n/g,
+            '<br>'
+        )
         commentElement.classList.add('comment')
 
         const dateElement = document.createElement('span')
-        dateElement.textContent = review.date
+        dateElement.textContent = review.review.createdAt.substr(0, 10)
         dateElement.classList.add('date')
 
-        reviewElement.appendChild(profilePicture)
+        console.log(reviewElement)
+        console.log(nicknameElement)
+        console.log(ratingElement)
+
+        // reviewElement.appendChild(profilePicture)
         reviewElement.appendChild(nicknameElement)
         reviewElement.appendChild(ratingElement)
         reviewElement.appendChild(commentElement)
         reviewElement.appendChild(dateElement)
 
         reviewBox.appendChild(reviewElement)
+        console.log(reviewBox)
     })
 }
 
 // 초기화 함수
 function initialize() {
-    fetchReviews(storeIdx)
+    fetchReviews(window.storeIdx)
 }
 
 // 페이지 로드 시 초기화 함수 실행
