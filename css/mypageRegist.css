@@ -1,0 +1,143 @@
+body {
+    position: absolute;
+    min-width: 768px;
+    width: 1440px;
+    height: 1328px;
+    margin: auto;
+}
+
+.ment {
+    position: relative;
+    left: 180px;
+    top: 190px;
+}
+
+.registText1 {
+    font-size: 24px;
+    position: relative;
+    font-weight: bolder;
+}
+
+.registText2 {
+    font-size: 12px;
+    position: relative;
+    margin-left: 10px;
+    top: -25px;
+    left: 260px;
+}
+
+.infoBox {
+    position: absolute;
+    top: 250px;
+    left: 180px;
+}
+
+.home {
+    width: 483px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.home img {
+    width: 23px;
+    height: 23px;
+    margin-left: 15px;
+    position: relative;
+    top: 6px;
+}
+
+.home h3 {
+    margin-top: -12px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.location {
+    width: 483px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.location img {
+    margin-left: 15px;
+    position: relative;
+    top: 7px;
+}
+
+.location h3 {
+    margin-top: -10px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.phone {
+    width: 483px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.phone img {
+    margin-left: 15px;
+    position: relative;
+    top: 10px;
+}
+
+.phone h3 {
+    margin-top: -16px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.telephone {
+    width: 483px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.telephone img {
+    margin-left: 20px;
+    position: relative;
+    top: 8px;
+}
+
+.telephone h3 {
+    margin-top: -10px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.registPhoto {
+    margin-top: 25px;
+}
+
+.registPhoto h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.photo {
+    width: 483px;
+    height: 213px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 30px;
+    margin-bottom: 10px;
+}
+
+.registPhoto input {
+    padding-left: 120px;
+    position: relative;
+    align-items: center;
+}

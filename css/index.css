@@ -1,0 +1,396 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'GmarketSansMedium';
+}
+
+/*내브바*/
+.mainNav {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 15px 0;
+}
+
+.mainNavIcon {
+    display: flex;
+    align-items: center;
+}
+
+.categoryBtn {
+    cursor: pointer;
+}
+
+.mainLogo {
+    margin-left: 15px;
+    cursor: pointer;
+}
+
+.loginBtn {
+    margin-top: 12px;
+    font-size: 12px;
+    padding-right: 10px;
+    border-right: 1px solid black;
+    cursor: pointer;
+}
+
+.signupBtn {
+    margin-top: 12px;
+    font-size: 12px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.mainProfile {
+    display: flex;
+    align-items: center;
+}
+
+.mainProfileNameWrap {
+    display: flex;
+}
+
+.mainProfileName {
+    display: none;
+    padding-top: 12px;
+}
+
+.mainProfileText {
+    display: none;
+    margin-left: 3px;
+    color: #9E9E9E;
+    padding-top: 12px;
+}
+
+.profileContainer {
+    position: relative;
+    display: inline-block;
+    align-items: center;
+}
+
+.mainProfileImg {
+    position: relative;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.myProfileMore {
+    width: 100px;
+    padding: 10px;
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 100%;
+    left: 0%;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10;
+}
+
+.myProfileMore > p {
+    cursor: pointer;
+}
+
+.myProfileMore > hr {
+    height: 1px;
+    width: 100%;
+    margin: 5px 0;
+    background-color: black;
+}
+
+.profileContainer:hover .myProfileMore,
+.profileContainer .myProfileMore:hover{
+    display: flex;
+}
+
+
+
+/*카테고리 버튼들*/
+
+.hiddenCategory {
+    display: none;
+    position: absolute;
+    margin: 0 auto;
+    max-width: 1100px;
+    z-index: 1;
+}
+
+.food {
+    border: none;
+    height: 225px;
+    background-color: #fffcf9;
+    margin: 0 auto;
+    max-width: 1100px;
+    position: relative;
+}
+
+.main-food {
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.large-food1 {
+    position: absolute;
+    top: 55px;
+    left: 25px;
+}
+
+.large-food2 {
+    position: absolute;
+    top: 105px;
+    left: 25px;
+}
+
+.large-food3 {
+    position: absolute;
+    top: 155px;
+    left: 25px;
+}
+
+.large-food4 {
+    position: absolute;
+    top: 55px;
+    left: 225px;
+}
+
+.large-food5 {
+    position: absolute;
+    top: 105px;
+    left: 225px;
+}
+
+.large-food6 {
+    position: absolute;
+    top: 155px;
+    left: 225px;
+}
+
+.large-food7 {
+    position: absolute;
+    top: 55px;
+    left: 425px;
+}
+
+.large-food8 {
+    position: absolute;
+    top: 105px;
+    left: 425px;
+}
+
+.large-food9 {
+    position: absolute;
+    top: 155px;
+    left: 425px;
+}
+
+.large-food10 {
+    position: absolute;
+    top: 55px;
+    left: 625px;
+}
+
+.small-food1,
+.small-food2,
+.small-food3,
+.small-food4,
+.small-food5,
+.small-food6,
+.small-food7,
+.small-food8,
+.small-food9,
+.small-food10 {
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: black;
+    padding: 0 0 0 0;
+}
+
+.example-food1,
+.example-food2,
+.example-food3,
+.example-food4,
+.example-food5,
+.example-food6,
+.example-food7,
+.example-food8,
+.example-food9,
+.example-food10 {
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    color: #848484;
+    padding: 0 0 0 0;
+}
+
+.food-divider {
+    border: none;
+    height: 1px;
+    background-color: #e6e6e6;
+    margin: 0 auto;
+    max-width: 1100px;
+    width: 95vw;
+}
+
+.non-food {
+    border: none;
+    height: 225px;
+    background-color: #fffcf9;
+    margin: 0 auto;
+    max-width: 1100px;
+    position: relative;
+}
+
+.main-non-food {
+    font-size: 16px;
+    font-weight: bold;
+    position: absolute;
+    top: 25px;
+    left: 25px;
+}
+
+.large-non-food1 {
+    position: absolute;
+    top: 55px;
+    left: 25px;
+}
+
+.large-non-food2 {
+    position: absolute;
+    top: 105px;
+    left: 25px;
+}
+
+.large-non-food3 {
+    position: absolute;
+    top: 155px;
+    left: 25px;
+}
+
+.large-non-food4 {
+    position: absolute;
+    top: 55px;
+    left: 225px;
+}
+
+.large-non-food5 {
+    position: absolute;
+    top: 105px;
+    left: 225px;
+}
+
+.large-non-food6 {
+    position: absolute;
+    top: 155px;
+    left: 225px;
+}
+
+.small-non-food1,
+.small-non-food2,
+.small-non-food3,
+.small-non-food4,
+.small-non-food5,
+.small-non-food6 {
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    background: transparent;
+    color: black;
+    padding: 0 0 0 0;
+}
+
+.example-non-food1,
+.example-non-food2,
+.example-non-food3,
+.example-non-food4,
+.example-non-food5,
+.example-non-food6 {
+    font-size: 14px;
+    border: none;
+    background: transparent;
+    color: #848484;
+    padding: 0 0 0 0;
+}
+
+/*푸터*/
+
+.footer{
+    margin-top: 130px;
+    border-top: 1px solid #999999;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 50px;
+}
+
+.footerLeft{
+    display: flex;
+    align-items: center;
+}
+
+#footerLogo{
+    width: 100px;
+}
+
+.footerLeft > div{
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+
+.footerLeft > div > div{
+    display: flex;
+}
+
+.department{
+    font-weight: bolder;
+}
+
+.peopleList{
+    color: #666666;
+    margin-left: 5px;
+}
+
+.peopleListFE{
+    color: #666666;
+    margin-left: 10px;
+}
+
+.peopleListBE{
+    color: #666666;
+    margin-left: 9px;
+}
+
+.footerRight{
+    display: flex;
+    align-items: center;
+}
+
+.footerRight > p{
+    margin-left: 10px;
+    color: #6C6C6C;
+}
+
+p{
+    margin: 0;
+}

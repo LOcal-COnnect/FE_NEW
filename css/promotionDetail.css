@@ -1,0 +1,193 @@
+.container {
+    margin: 0 auto 20px auto;
+    padding: 0 17vw;
+    font-family: 'GmarketSansMedium';
+}
+
+.containerHeader {
+    padding: 10px 0;
+}
+.containerHeader > p {
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.containerPostWrap {
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 20px 30px;
+    border: 1px solid #d5d5d5;
+}
+
+.postHeadWrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.postTime {
+    color: #8f8f8f;
+    margin-left: 10px;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.postContentWrap {
+    font-size: 12px;
+    margin-top: 15px;
+}
+.postPictureWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.postPictureWrap > img {
+    width: calc(33.3% - 5px);
+    height: auto;
+    margin-top: 15px;
+}
+
+.buttonTwo {
+    display: flex;
+}
+
+.postDetailWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.postDetailWrap > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    font-size: 11px;
+}
+
+.postDetailWrap > div > img {
+    margin-left: 3px;
+    margin-right: 2px;
+}
+
+.postDetailWrap > div > p {
+    margin-right: 2px;
+}
+
+.storeInfoWrap {
+    cursor: pointer;
+}
+
+.storeInfoWrap > p {
+    margin-left: 3px;
+}
+
+.postCommentWrap {
+    padding: 15px 30px;
+}
+
+.commentNumber {
+    font-size: 14px;
+}
+
+.commentInput {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+}
+
+.commentInput > img {
+    width: 30px;
+    height: 30px;
+}
+
+.commentInput > input {
+    width: calc(100% - 30px);
+    margin-left: 5px;
+    padding: 2px;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 1px solid #cecece;
+}
+
+.commentProfile {
+    width: 30px;
+    height: 30px;
+}
+
+.commentList {
+    padding: 10px 0;
+    display: block;
+    flex-direction: row;
+    align-items: center;
+}
+
+.commentItem {
+    margin-top: 20px;
+}
+
+.commentList > img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.commentContent {
+    display: flex;
+    flex-direction: column;
+}
+
+.commentContent > div {
+    display: flex;
+    flex-direction: row;
+}
+
+.commentTitle {
+    font-size: 14px;
+}
+
+.commentTime {
+    font-size: 10px;
+    color: #8f8f8f;
+    padding-top: 3px;
+    margin-left: 10px;
+}
+
+.comment {
+    margin-top: 5px;
+    font-size: 12px;
+    color: black;
+}
+
+#goodnum {
+    cursor: pointer;
+    width: 14px;
+}
+.active {
+    width: 14px;
+}
+
+.editButton {
+    width: 100px;
+}
+
+.deleteButton {
+    width: 100px;
+}
+
+.buttonTwo {
+    display: flex;
+    justify-content: flex-end;
+    gap: 5px;
+}
+
+.saveButton {
+    float: right;
+    margin-left: 10px;
+    padding: 0 5px;
+}
+
+.comment input[type='text'] {
+    width: 100%;
+}

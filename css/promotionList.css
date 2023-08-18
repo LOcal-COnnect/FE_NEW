@@ -1,0 +1,216 @@
+.container {
+    margin: 0 auto 20px auto;
+    padding: 0 17vw;
+    font-family: 'GmarketSansMedium';
+}
+
+@media (max-width: 1000px) {
+    .container {
+        padding: 0 8vw;
+    }
+}
+
+.promotionSelectBtWrap {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.promotionBtWrap,
+.promotionFilterBtWrap {
+    display: flex;
+    flex-direction: row;
+}
+
+.selectedCityBt {
+    display: none;
+    font-size: 13px;
+    padding: 3px 10px;
+    border-radius: 20px;
+    border: 1px solid #848484;
+}
+
+#recentSort,
+#likeSort,
+#viewSort {
+    font-size: 13px;
+    font-weight: bolder;
+    border-radius: 20px;
+    border: 1px solid #848484;
+    color: #848484;
+    padding: 3px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#recentSort.sortButton.active,
+#likeSort.sortButton.active,
+#viewSort.sortButton.active {
+    background-color: #ff9900;
+    border: 0;
+    color: white;
+}
+#filterBt {
+    font-size: 13px;
+    font-weight: bolder;
+    border-radius: 20px;
+    border: 1px solid #848484;
+    color: #848484;
+    padding: 3px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+#moveWriteProBt {
+    font-size: 13px;
+    font-weight: bolder;
+    border-radius: 20px;
+    color: white;
+    background-color: black;
+    padding: 3px 10px;
+    margin-right: 5px;
+    cursor: pointer;
+}
+
+.promotionListWrap {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    margin: 15px auto;
+    justify-content: flex-start;
+}
+
+.promotionCard {
+    padding: 15px;
+    border: 0;
+    border-radius: 20px;
+    width: 220px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 2px 5px;
+    cursor: pointer;
+}
+
+.promotionCard:hover {
+    box-shadow: 4px 4px 4px 3px rgb(0, 0, 0, 0.03);
+}
+
+.promotionImg {
+    width: 100%;
+    height: auto;
+}
+
+.promotionCard h3 {
+    font-size: 15px;
+    margin: 10px 0;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.storeIntro {
+    font-size: 12px;
+    height: 50px;
+}
+
+.storeIntro > p {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: #555454;
+}
+
+.promotionInfo {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.storeInfo {
+    display: flex;
+    flex-direction: row;
+}
+
+.storeName {
+    margin-left: 5px;
+    font-size: small;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+/* 데스크탑 화면 크기 이상일 때 */
+@media (min-width: 1024px) {
+    .promotionListWrap {
+        justify-content: flex-start;
+    }
+    .promotionCard {
+        width: calc(25% - 10px);
+    }
+}
+
+#buttonContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+/* 태블릿 화면 크기일 때 */
+@media (max-width: 1023px) {
+    .promotionListWrap {
+        justify-content: space-between;
+    }
+    .promotionCard {
+        width: calc(33.33% - 10px);
+    }
+}
+
+/* 모바일 화면 크기일 때 */
+@media (max-width: 767px) {
+    .promotionListWrap {
+        justify-content: space-between;
+    }
+    .promotionCard {
+        width: calc(50% - 10px);
+    }
+}
+
+@media (max-width: 450px) {
+    .promotionListWrap {
+        flex-direction: column;
+        align-items: center;
+    }
+    .promotionCard {
+        width: 95%;
+        margin-bottom: 10px;
+    }
+}
+
+.promotionSearchBtWrap {
+    display: none;
+    margin-top: 15px;
+}
+
+.searchBt {
+    display: flex;
+    align-items: center;
+}
+
+.searchTitle {
+    margin-left: 17px;
+    margin-right: 10px;
+}
+
+.searchName {
+    color: white;
+    font-size: 14px;
+    background-color: #ff9900;
+    border-radius: 20px;
+    border: 0;
+    padding: 4px 7px;
+}

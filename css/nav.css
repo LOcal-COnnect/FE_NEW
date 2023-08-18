@@ -1,0 +1,353 @@
+body {
+  min-width: 768px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-component {
+  background-color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 80px;
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0;
+}
+
+.category {
+  margin-left: 20px;
+}
+
+.category-btn {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  background-image: url('../img/CategoryButton.svg');
+  background-size: cover; /* 배경 이미지를 버튼 크기에 맞게 조정 */
+  border: none; /* 버튼의 기본 스타일을 없앰 */
+  cursor: pointer; /* 버튼 모양을 가리키는 커서로 변경 */
+}
+
+.home {
+  margin-left: 10px;
+  margin-right: 50px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  position: relative; /* position을 추가하여 자식 요소를 포함한 위치를 설정 */
+}
+
+.search input[type='text'] {
+  /* 기존 입력란 스타일 유지 */
+  border: 1px solid black;
+  border-radius: 15px;
+  padding: 12px 12px;
+  font-size: 14px;
+  width: 40vw;
+  max-width: 500px;
+}
+
+.search button {
+  /* 기존 버튼 스타일 유지 및 position: absolute; 추가 */
+  border: none;
+  background-color: transparent;
+  padding: 10px;
+  cursor: pointer;
+  position: absolute; /* 부모 요소를 기준으로 위치를 설정 */
+  right: 10px;
+}
+
+.search button img {
+  width: 30px; /* 이미지 크기를 원하는대로 조정하세요 */
+  height: 30px; /* 이미지 크기를 원하는대로 조정하세요 */
+}
+
+.login-register {
+  margin-left: 50px;
+}
+
+.login-btn {
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: black;
+  margin-top: 40px;
+  padding: 0%;
+}
+
+.register-btn {
+  font-size: 11px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: black;
+  margin-top: 40px;
+  padding: 0%;
+}
+
+.mypage {
+  position: relative;
+  margin-left: 10px;
+  margin-right: 35px;
+  margin-top: 20px;
+  right: 0vw;
+  cursor: pointer;
+}
+
+.mypage-btn {
+  width: 20px;
+  height: 20px;
+  border: none; /* 버튼의 기본 스타일을 없앰 */
+  cursor: pointer; /* 버튼 모양을 가리키는 커서로 변경 */
+}
+
+.navbar-divider {
+  border: none;
+  height: 1px;
+  background-color: orange;
+  margin: 0 auto;
+  min-width: 768px;
+  max-width: 1200px;
+}
+
+/*마이페이지　선택*/
+
+.parent-container {
+  position: relative; /* 부모 요소에 상대적인 위치 속성 설정 */
+  max-width: 1100px;
+  margin: 0 auto; /* 수평 가운데 정렬을 위해 사용 */
+}
+
+.button-container {
+  display: none;
+  position: absolute; /* 위치 지정을 위해 상대적인 위치로 설정 */
+  z-index: 2;
+  right: 0;
+}
+
+/* 버튼 스타일 */
+.usermypage-btn,
+.logout-btn {
+  display: block;
+  width: 90px;
+  height: 25px;
+  border: 1px solid black;
+  color: black;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: white;
+}
+
+/*카테고리 버튼들*/
+
+.hiddenCategory {
+  position: absolute;
+  margin: 0 auto;
+  max-width: 1100px;
+  z-index: 1;
+}
+
+.food {
+  border: none;
+  height: 225px;
+  background-color: #fffcf9;
+  margin: 0 auto;
+  max-width: 1100px;
+  position: relative;
+}
+
+.main-food {
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.large-food1 {
+  position: absolute;
+  top: 55px;
+  left: 25px;
+}
+
+.large-food2 {
+  position: absolute;
+  top: 105px;
+  left: 25px;
+}
+
+.large-food3 {
+  position: absolute;
+  top: 155px;
+  left: 25px;
+}
+
+.large-food4 {
+  position: absolute;
+  top: 55px;
+  left: 225px;
+}
+
+.large-food5 {
+  position: absolute;
+  top: 105px;
+  left: 225px;
+}
+
+.large-food6 {
+  position: absolute;
+  top: 155px;
+  left: 225px;
+}
+
+.large-food7 {
+  position: absolute;
+  top: 55px;
+  left: 425px;
+}
+
+.large-food8 {
+  position: absolute;
+  top: 105px;
+  left: 425px;
+}
+
+.large-food9 {
+  position: absolute;
+  top: 155px;
+  left: 425px;
+}
+
+.large-food10 {
+  position: absolute;
+  top: 55px;
+  left: 625px;
+}
+
+.small-food1,
+.small-food2,
+.small-food3,
+.small-food4,
+.small-food5,
+.small-food6,
+.small-food7,
+.small-food8,
+.small-food9,
+.small-food10 {
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: black;
+  padding: 0 0 0 0;
+}
+
+.example-food1,
+.example-food2,
+.example-food3,
+.example-food4,
+.example-food5,
+.example-food6,
+.example-food7,
+.example-food8,
+.example-food9,
+.example-food10 {
+  font-size: 14px;
+  border: none;
+  background: transparent;
+  color: #848484;
+  padding: 0 0 0 0;
+}
+
+.food-divider {
+  border: none;
+  height: 1px;
+  background-color: #e6e6e6;
+  margin: 0 auto;
+  max-width: 1100px;
+  width: 95vw;
+}
+
+.non-food {
+  border: none;
+  height: 225px;
+  background-color: #fffcf9;
+  margin: 0 auto;
+  max-width: 1100px;
+  position: relative;
+}
+
+.main-non-food {
+  font-size: 16px;
+  font-weight: bold;
+  position: absolute;
+  top: 25px;
+  left: 25px;
+}
+
+.large-non-food1 {
+  position: absolute;
+  top: 55px;
+  left: 25px;
+}
+
+.large-non-food2 {
+  position: absolute;
+  top: 105px;
+  left: 25px;
+}
+
+.large-non-food3 {
+  position: absolute;
+  top: 155px;
+  left: 25px;
+}
+
+.large-non-food4 {
+  position: absolute;
+  top: 55px;
+  left: 225px;
+}
+
+.large-non-food5 {
+  position: absolute;
+  top: 105px;
+  left: 225px;
+}
+
+.large-non-food6 {
+  position: absolute;
+  top: 155px;
+  left: 225px;
+}
+
+.small-non-food1,
+.small-non-food2,
+.small-non-food3,
+.small-non-food4,
+.small-non-food5,
+.small-non-food6 {
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  background: transparent;
+  color: black;
+  padding: 0 0 0 0;
+}
+
+.example-non-food1,
+.example-non-food2,
+.example-non-food3,
+.example-non-food4,
+.example-non-food5,
+.example-non-food6 {
+  font-size: 14px;
+  border: none;
+  background: transparent;
+  color: #848484;
+  padding: 0 0 0 0;
+}

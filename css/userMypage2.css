@@ -1,0 +1,300 @@
+.myTitle {
+    text-align: center;
+    font-size: 19px;
+    font-weight: bolder;
+    margin-top: 20px;
+}
+
+.myTabNav {
+    width: 70vw;
+    margin: 20px auto;
+    border-bottom: 1px solid #dadada;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.myTabNav > div {
+    cursor: pointer;
+    text-align: center;
+    width: calc(33.3% - 50px);
+    padding: 15px 0;
+    color: #d6d6d6;
+    font-weight: bolder;
+}
+
+.myProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.myProfile > div {
+    text-align: center;
+    margin-left: 15px;
+}
+
+.myId {
+    margin-top: 10px;
+}
+
+.myInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 50vw;
+}
+
+.myInfo > div {
+    display: grid;
+    grid-template-columns: 40px calc(100% - 40px);
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    border: 0;
+    padding: 10px 0 10px 5px;
+    margin: 5px 0;
+}
+
+.myInfo > div > img {
+    margin: 0 auto;
+}
+
+.myBtWrap {
+    display: flex;
+    justify-content: center;
+}
+.moveEditMyBt {
+    width: 40vw;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+#tab1.tab.active,
+#tab2.tab.active,
+#tab3.tab.active {
+    border-bottom: 2px solid #ff9900;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: black;
+}
+
+.tab1 {
+    display: none;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.tab2 {
+    display: none;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.storesListWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Align cards to the left */
+    margin: 0 auto;
+    width: 100%;
+}
+
+.storeCard {
+    flex: 0 0 calc(45% - 10px);
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #b7b7b7;
+    margin: 5px;
+}
+
+.storeCard > img {
+    width: 50%;
+    margin-right: 10px;
+}
+
+.storeInfo {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.storeInfo > h3 {
+    margin: 0;
+}
+
+.storeInfoNumber {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 15px;
+}
+
+.storeInfoNumber > div {
+    margin-left: 5px;
+}
+
+.storeInfoDate {
+    color: #b7b7b7;
+    margin-top: 15px;
+}
+
+.storeInfoHeart {
+    width: 100%;
+    text-align: right;
+    margin-top: 40px;
+}
+
+/*내가쓴리뷰 tab3*/
+.tab3 {
+    display: block;
+    width: 50vw;
+    margin: 0 auto;
+}
+
+.reviewListWrap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.yesReviewCard {
+    display: flex;
+    flex-direction: row;
+    padding: 15px;
+    border: 1px solid #a0a0a0;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    position: relative;
+}
+
+.noReviewCard {
+    padding: 15px;
+    border: 1px solid #a0a0a0;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.reviewCardTop {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+.reviewStoreName {
+    display: flex;
+    align-items: center;
+}
+
+.reviewStoreName > h3 {
+    cursor: pointer;
+}
+
+.reviewStoreName > img {
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+.reviewStarWrap {
+    display: flex;
+    margin-top: 10px;
+}
+
+.reviewStar {
+    display: flex;
+}
+
+.reviewStarDate {
+    display: flex;
+    margin-left: 15px;
+    font-size: 12px;
+    padding-top: 5px;
+}
+
+.reviewContent {
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+#storeImg {
+    width: 100%;
+    height: auto; /* Make the height adjust automatically to maintain aspect ratio */
+}
+
+.buttonReview {
+    display: flex;
+}
+
+.modify {
+    font-size: 10px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+}
+
+.modify h2 {
+    font-size: 15px;
+}
+
+.delete {
+    font-size: 10px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+}
+
+.delete h2 {
+    font-size: 15px;
+}
+
+.imgBlock {
+    display: block;
+}
+
+.buttonReview2 {
+    display: flex;
+    margin-left: 562px;
+}
+
+.modify2 {
+    font-size: 10px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+}
+
+.modify2 h2 {
+    font-size: 15px;
+}
+
+.delete2 {
+    font-size: 10px;
+    margin-top: 20px;
+    padding: 5px 10px;
+    background-color: #f2f2f2;
+    color: #333;
+    text-decoration: none;
+}
+
+.delete2 h2 {
+    font-size: 15px;
+}

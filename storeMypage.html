@@ -1,0 +1,492 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="css/storeMypageTab2(2).css"
+        />
+        <link rel="stylesheet" href="css/index.css" />
+        <title>가게 마이페이지(2)</title>
+    </head>
+
+    <body>
+        <div class="mainNav">
+            <div class="mainNavIcon">
+                <img class="categoryBtn" id="categoryButton" src="img/hamburger.svg" onClick="toggleHiddenCategory();" />
+                <img class="mainLogo" src="img/mainLoco.svg" onclick="location.href='index.html'" />
+            </div>
+            <div class="mainProfile">
+                <p class="loginBtn" onclick="location.href='login.html'">로그인</p>
+                <p class="signupBtn" onclick="location.href='selectJoin.html'">회원가입</p>
+                <p class="mainProfileName"></p>
+                <p class="mainProfileText">님</p>
+                <div class="profileContainer">
+                    <img class="mainProfileImg" src="img/MyPageButton.svg" />
+                    <div class="myProfileMore">
+                        <p onClick="moveMypage();">마이페이지</p>
+                        <hr />
+                        <p onClick="logout();">로그아웃</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="hiddenCategory" style="display: none">
+            <div class="food">
+                <div class="main-food">음식</div>
+                <div class="large-food1">
+                    <button class="small-food1" id="smallfood1Button" onclick="gotopromotionList('food1');">
+                        곡물류 >
+                    </button>
+                    <div class="example-food1">쌀/보리/콩 등</div>
+                </div>
+                <div class="large-food2">
+                    <button class="small-food2" id="smallfood2Button" onclick="gotopromotionList('food2');">
+                        김치류 >
+                    </button>
+                    <div class="example-food2">배추김치/무김치/깍두기 등
+                    </div>
+                </div>
+                <div class="large-food3">
+                    <button class="small-food3" id="smallfood3Button" onclick="gotopromotionList('food3');">
+                        발효식품류 >
+                    </button>
+                    <div class="example-food3">간장/고추장/된장 등</div>
+                </div>
+                <div class="large-food4">
+                    <button class="small-food4" id="smallfood4Button" onclick="gotopromotionList('food4');">
+                        면류 >
+                    </button>
+                    <div class="example-food4">국수/라면/우동 등</div>
+                </div>
+                <div class="large-food5">
+                    <button class="small-food5" id="smallfood5Button" onclick="gotopromotionList('food5');">
+                        떡류 >
+                    </button>
+                    <div class="example-food5">떡볶이/송편/인절미 등</div>
+                </div>
+                <div class="large-food6">
+                    <button class="small-food6" id="smallfood6Button" onclick="gotopromotionList('food6');">
+                        생선과 해산물 >
+                    </button>
+                    <div class="example-food6">명태/고등어/굴 등</div>
+                </div>
+                <div class="large-food7">
+                    <button class="small-food7" id="smallfood7Button" onclick="gotopromotionList('food7');">
+                        과일 >
+                    </button>
+                    <div class="example-food7">배/사과/복숭아 등</div>
+                </div>
+                <div class="large-food8">
+                    <button class="small-food8" id="smallfood8Button" onclick="gotopromotionList('food8');">
+                        차류 >
+                    </button>
+                    <div class="example-food8">녹차/홍차/율무차 등</div>
+                </div>
+                <div class="large-food9">
+                    <button class="small-food9" id="smallfood9Button" onclick="gotopromotionList('food9');">
+                        과자류 >
+                    </button>
+                    <div class="example-food9">한과/빈대떡/쌀과자 등</div>
+                </div>
+                <div class="large-food10">
+                    <button class="small-food10" id="smallfood10Button" onclick="gotopromotionList('food10');">
+                        한약류 >
+                    </button>
+                    <div class="example-food10">인삼/홍차/대추 등</div>
+                </div>
+            </div>
+            <hr class="food-divider" />
+            <div class="non-food">
+                <div class="main-non-food">비음식</div>
+                <div class="large-non-food1">
+                    <button
+                            class="small-non-food1"
+                            id="smallnonfood1Button"
+                            onclick="gotopromotionList('nonfood1');"
+                    >
+                        의류와 직물 >
+                    </button>
+                    <div class="example-non-food1">한복/삼베/비단 등</div>
+                </div>
+                <div class="large-non-food2">
+                    <button
+                            class="small-non-food2"
+                            id="smallnonfood2Button"
+                            onclick="gotopromotionList('nonfood2');"
+                    >
+                        도자기와 세라믹 >
+                    </button>
+                    <div class="example-non-food2">강화도자기/기와 등</div>
+                </div>
+                <div class="large-non-food3">
+                    <button
+                            class="small-non-food3"
+                            id="smallnonfood3Button"
+                            onclick="gotopromotionList('nonfood3');"
+                    >
+                        목공예품 >
+                    </button>
+                    <div class="example-non-food3">원목가구/칠보 등</div>
+                </div>
+                <div class="large-non-food4">
+                    <button
+                            class="small-non-food4"
+                            id="smallnonfood4Button"
+                            onclick="gotopromotionList('nonfood4');"
+                    >
+                        기타 공예품 >
+                    </button>
+                    <div class="example-non-food4">한지공예/감람공예 등
+                    </div>
+                </div>
+                <div class="large-non-food5">
+                    <button
+                            class="small-non-food5"
+                            id="smallnonfood5Button"
+                            onclick="gotopromotionList('nonfood5');"
+                    >
+                        화장품 >
+                    </button>
+                    <div class="example-non-food5">천연화장품/로션 등</div>
+                </div>
+                <div class="large-non-food6">
+                    <button
+                            class="small-non-food6"
+                            id="smallnonfood6Button"
+                            onclick="gotopromotionList('nonfood6');"
+                    >
+                        금속공예품 >
+                    </button>
+                    <div class="example-non-food6">동상/반지 등</div>
+                </div>
+            </div>
+        </div>
+        <div class="container" id="myTabContent">
+            <div class="myTitle">마이 페이지</div>
+            <div class="myTabNav">
+                <div id="tab1" class="tab active">내 정보</div>
+                <div id="tab2" class="tab">가게 홍보</div>
+                <div id="tab3" class="tab">가게 등록</div>
+            </div>
+            <div class="tab1 active">
+                <div class="myInfo">
+                    <div>
+                        <img src="..\svg\Location.svg" />
+                        <div>서울특별시</div>
+                    </div>
+                    <div>
+                        <img src="..\svg\Location.svg" />
+                        <div>어쩌고저쩌고</div>
+                    </div>
+                    <div>
+                        <img src="img/profileIcon.svg" />
+                        <div></div>
+                    </div>
+                    <div>
+                        <img src="..\svg\person.svg" />
+                        <div>id123</div>
+                    </div>
+                    <div>
+                        <img src="..\svg\pw.svg" />
+                        <div>imapassword</div>
+                    </div>
+                    <div>
+                        <img src="..\svg\Message.svg" />
+                        <div>abcd@gmail.com</div>
+                    </div>
+                    <div>
+                        <img src="..\svg\SmartPhone.svg" />
+                        <div>010-1234-5678</div>
+                    </div>
+
+                </div>
+                <div class="myBtWrap">
+                    <button class="moveEditMyBt" type="button">
+                        내 정보 수정하기
+                    </button>
+                </div>
+            </div>
+
+            <div class="tab2">
+                <div class="boxInfo">
+                    <div class="promotionListWrap">
+                        <div class="promotionCard" onclick="moveDetail(1);">
+                            <img
+                                class="promotionImg"
+                                src="..\svg\exampImg.svg"
+                            />
+                            <h3>도라에몽이 왔다간 가게</h3>
+                            <div class="storeIntro">
+                                우리가게는 어떻고 저떻고 그래서 이래서 좋아요
+                            </div>
+                            <div class="promotionInfo">
+                                <div class="storeInfo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promotionListWrap">
+                        <div class="promotionCard" onclick="moveDetail(1);">
+                            <img
+                                class="promotionImg"
+                                src="..\svg\exampImg.svg"
+                            />
+                            <h3>도라에몽이 왔다간 가게</h3>
+                            <div class="storeIntro">
+                                우리가게는 어떻고 저떻고 그래서 이래서 좋아요
+                            </div>
+                            <div class="promotionInfo">
+                                <div class="storeInfo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="promotionListWrap">
+                        <div class="promotionCard" onclick="moveDetail(1);">
+                            <img
+                                class="promotionImg"
+                                src="..\svg\exampImg.svg"
+                            />
+                            <h3>도라에몽이 왔다간 가게</h3>
+                            <div class="storeIntro">
+                                우리가게는 어떻고 저떻고 그래서 이래서 좋아요
+                            </div>
+                            <div class="promotionInfo">
+                                <div class="storeInfo"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <button type="button" class="completeBt" onClick="location.href='createPromotion.html'">홍보글 작성하기</button>
+
+                </div>
+             </div>
+
+            <div class="tab3">
+                <div class="firstBox">
+                    <div class="regist">
+                        <div class="ment">
+                            <h2 class="registText1">우리 가게를 등록하세요!</h2>
+                            <h3 class="registText2">
+                                소비자들에게 공개되는 페이지이므로, 예쁘게
+                                꾸며주세요
+                            </h3>
+                        </div>
+
+                        <!--가게명, 위치+상세위치, 전화번호, 가게 전화번호-->
+                        <div class="infoAndMenuContainer">
+                            <div class="infoBox">
+                                <div class="phone">
+                                    <img src="svg/Location.svg"/>
+                                    <input type="text" id="storeLocation" placeholder="가게 위치"/>
+                                </div>
+                                <div class="phone">
+                                    <img src="svg/SmartPhone.svg" style="margin-right: 3px;"/>
+                                    <input type="text" id="storePhone" placeholder="전화번호"/>
+                                </div>
+                                <div class="phone">
+                                    <img src="svg/Telephone.svg" style="width: 18px; margin-right: 5px;"/>
+                                    <input type="text" id="storeTel" placeholder="가게 전화번호"/>
+                                </div>
+                                <div class="phone">
+                                    <img src="svg/Home filled.svg"/>
+                                    <input type="text" id="businessNumber" placeholder="사업자등록번호"/>
+                                </div>
+                            </div>
+
+                            <div class="registPhoto">
+                                <h2>가게 사진 등록하기</h2>
+                                <label for="photoInput" class="photo">
+                                    <h3 class="photoMent">
+                                        사진 첨부를 위해 클릭해주세요.
+                                    </h3>
+                                </label>
+                                <input
+                                    type="file"
+                                    id="photoInput"
+                                    style="display: none"
+                                />
+                            </div>
+
+                            <div class="category-container">
+                                <h2>카테고리 선택</h2>
+                                <div
+                                    class="category-selection"
+                                    onclick="toggleOptions()"
+                                >
+                                    분류
+                                    <span class="arrow-down"></span>
+                                </div>
+                                <div
+                                    class="category-options"
+                                    id="categoryOptions"
+                                >
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('곡물류')"
+                                    >
+                                        곡식류
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('면류')"
+                                    >
+                                        면류
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('과일')"
+                                    >
+                                        과일
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('한약재')"
+                                    >
+                                        한약재
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('김치류')"
+                                    >
+                                        김치류
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('떡류')"
+                                    >
+                                        떡류
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('차류')"
+                                    >
+                                        차류
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('발효식품')"
+                                    >
+                                        발효식품
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('생선과 해산물')"
+                                    >
+                                        생선과 해산물
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('과자류')"
+                                    >
+                                        과자류
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="secondBox">
+                        <div class="forButton">
+                            <div class="right">
+                                <div class="menu">
+                                    <div class="menuText">
+                                        <h2>가게 메뉴</h2>
+                                        <h3>
+                                            가게 메뉴는 최대 10개까지 등록
+                                            가능합니다.
+                                        </h3>
+                                    </div>
+                                    <div class="menus">
+                                        <div class="menuShow">
+                                            <div class="pic">
+                                                <label
+                                                    for="menuPhotoInput"
+                                                    class="menuPhoto"
+                                                >
+                                                    <h3 class="menuPhotoMent">
+                                                        사진첨부를 위해
+                                                        클릭해주세요.
+                                                    </h3>
+                                                </label>
+                                            </div>
+                                            <div class="product-info">
+                                                <input
+                                                    type="text"
+                                                    placeholder="상품명"
+                                                />
+                                                <input
+                                                    type="text"
+                                                    placeholder="가격"
+                                                />
+                                            </div>
+                                            <input
+                                                type="file"
+                                                id="menuPhotoInput"
+                                                style="display: none"
+                                            />
+                                        </div>
+
+                                        <div class="menuShow" id="plus">
+                                            <h2 class="plus">+</h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h2 class="introText">가게 소개글 작성하기</h2>
+                                <div class="introduction">
+                                    <textarea
+                                        id="introductionText2"
+                                        placeholder="1000자 이내"
+                                    ></textarea>
+                                    <div id="charCount2">0 / 1000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="register-button">
+                    <button id="registerBtn" class="register" type="button">
+                        점포 등록
+                    </button>
+                </div>
+            </div>
+
+        </div>
+        <div class="footer">
+            <div class="footerLeft">
+                <img id="footerLogo" src="img/loco1.svg" />
+                <div>
+                    <div>
+                        <p class="department">PM</p>
+                        <p class="peopleList">이혜미</p>
+                    </div>
+                    <div>
+                        <p class="department">FE</p>
+                        <p class="peopleListFE">이혜린, 이윤호, 장수진</p>
+                    </div>
+                    <div>
+                        <p class="department">BE</p>
+                        <p class="peopleListBE">김현우, 박선균</p>
+                    </div>
+                </div>
+            </div>
+            <div class="footerRight">
+                <img src="img/lioiin.png"/>
+                <p>상명대학교 멋쟁이 사자처럼 11기<br/>
+                    Instagram @likelion_smu</p>
+            </div>
+        </div>
+        <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+        <script src="js/index.js"></script>
+        <script src="js/storeMypageTab2(2).js"></script>
+    </body>
+</html>

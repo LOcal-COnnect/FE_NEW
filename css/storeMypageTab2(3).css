@@ -1,0 +1,734 @@
+.myTitle {
+    text-align: center;
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+.myTabNav {
+    width: 70vw;
+    margin: 20px auto;
+    border-bottom: 1px solid #dadada;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.myTabNav > div {
+    cursor: pointer;
+    text-align: center;
+    width: calc(33.3% - 50px);
+    padding: 15px 0;
+    color: #d6d6d6;
+    font-weight: bolder;
+}
+
+.myProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.myProfile > div {
+    text-align: center;
+    margin-left: 15px;
+}
+
+.myId {
+    margin-top: 10px;
+}
+
+.myInfo {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 50vw;
+}
+
+.myInfo > div {
+    display: grid;
+    grid-template-columns: 40px calc(100% - 40px);
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    border: 0;
+    padding: 10px 0 10px 5px;
+    margin: 5px 0;
+}
+
+.myInfo > div > img {
+    margin: 0 auto;
+}
+
+.myBtWrap {
+    display: flex;
+    justify-content: center;
+}
+.moveEditMyBt {
+    margin: 0 auto;
+    width: 20vw;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+#tab1.tab.active,
+#tab2.tab.active,
+#tab3.tab.active {
+    border-bottom: 2px solid #ff9900;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: black;
+}
+
+.tab2 {
+    display: none;
+    width: 60vw;
+    margin: 0 auto;
+}
+
+.containerInputWrap {
+    display: flex;
+    flex-direction: column;
+    padding: 15px 30px;
+    border-radius: 20px;
+    border: 1px solid #d5d5d5;
+    margin-left: 10px;
+}
+
+.titleInput {
+    padding: 10px 5px;
+    border-bottom: 1px solid #cecece;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 14px;
+}
+
+.contentInput {
+    font-size: 13px;
+    border: 0;
+    height: 300px;
+    padding: 10px 5px;
+    overflow: auto;
+    resize: none;
+    font-family: 'Pretendard-Regular';
+}
+
+.additionalMent {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #7b7b7b;
+}
+
+.buttonTwo {
+    display: flex;
+}
+
+.completeBt {
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px 0px;
+    width: 20vw;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-left: 15%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.deleteBt {
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px 0px;
+    width: 20vw;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-left: 3%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.pictureInputWrap {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pictureInputWrap > div {
+    background-color: #f5f5f5;
+    color: #7b7b7b;
+    padding: 30px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 20px;
+    width: calc(33.3% - 5px);
+    font-size: 12px;
+    height: 40vh;
+    line-height: 15px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.pictureInputBox input[type='file'] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#charCount {
+    font-size: 12px;
+    color: #7b7b7b;
+    margin-top: 10px;
+}
+
+.new-page {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.new-page h1 {
+    color: #007bff;
+}
+
+.new-page p {
+    line-height: 1.6;
+}
+
+/*내가쓴리뷰 tab3*/
+.tab3 {
+    width: 100vw;
+    margin: 0 auto;
+    display: none;
+}
+
+.firstBox {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+    width: 100vw;
+    margin-top: 78px;
+    margin-right: 1000px;
+}
+
+.right {
+    margin-top: 60px;
+}
+
+.ment {
+    display: flex;
+}
+
+.registText1 {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.registText2 {
+    font-size: 12px;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.infoAndMenuContainer {
+    margin-top: 20px;
+}
+
+.infoBox {
+    margin-top: 10px;
+    max-width: 483px;
+    flex-wrap: wrap;
+}
+/*
+.home {
+    max-width: 483px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.home2 img {
+    width: 23px;
+    height: 23px;
+    margin-left: 15px;
+    position: relative;
+    top: 6px;
+}
+
+.home2 h3 {
+    margin-top: -12px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+*/
+.location {
+    max-width: 483px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.location img {
+    margin-left: 15px;
+    position: relative;
+    top: 7px;
+}
+
+.location h3 {
+    margin-top: -10px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.phone {
+    max-width: 483px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.phone img {
+    margin-left: 15px;
+    position: relative;
+    top: 10px;
+}
+
+.phone h3 {
+    margin-top: -16px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.telephone {
+    max-width: 483px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.telephone img {
+    margin-left: 20px;
+    position: relative;
+    top: 8px;
+}
+
+.telephone h3 {
+    margin-top: -10px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.registPhoto {
+    margin-top: 25px;
+}
+
+.registPhoto h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.photo {
+    max-width: 483px;
+    width: 100%;
+    height: 213px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.registPhoto input {
+    padding-left: 120px;
+    position: relative;
+    align-items: center;
+}
+
+.photoMent {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.category-container {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.category-container h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.category-selection {
+    width: 40%;
+    max-width: 180px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    padding-left: 65px;
+    cursor: pointer;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+    margin-left: 5px;
+}
+
+.category-options {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 40%;
+    max-width: 180px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    display: none;
+}
+
+.category-option {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.category-option:last-child {
+    border-bottom: none;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menuText {
+    display: flex;
+}
+.menu h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu h3 {
+    font-size: 10px;
+    margin-top: 12px;
+    margin-left: 10px;
+    color: #7b7b7b;
+}
+
+.plus {
+    font-size: 50px;
+    margin-top: 70px;
+}
+
+.menuShow {
+    width: 164px;
+    height: 187px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pic {
+    width: 126px;
+    height: 100px;
+    background-color: #e4e4e4;
+    color: #7b7b7b;
+    position: relative;
+    top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuPhotoMent {
+    margin: 10px;
+    font-size: 12px; /* Change the font size to 12px */
+}
+
+.product-info {
+    width: 106px; /* Set the width to 106px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.product-info input {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.menu {
+    padding: 15px;
+    border: 0;
+    border-radius: 20px;
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 2px 5px;
+    cursor: pointer;
+}
+
+.menuShowContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menus {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    margin: 15px auto;
+    justify-content: space-between;
+}
+
+.introText {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 24px;
+}
+
+.introduction {
+    width: 100%;
+    max-width: 546px;
+    height: 213px;
+    background-color: #ffffff;
+    border: 0.5px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 25px;
+    padding: 15px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.introduction textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#charCount2 {
+    font-size: 12px;
+    color: #7b7b7b;
+    margin-top: 10px;
+}
+
+#charCount2 {
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    font-size: 12px;
+    color: #999;
+}
+
+.makeButton {
+    width: 100%;
+    max-width: 546px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.makeButton::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.register-button {
+    display: flex;
+    justify-content: center;
+    margin-right: 300px;
+}
+
+.register {
+    width: 25vw;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+/*
+<div class="infoAndMenuContainer">
+            <div class="infoBox">
+              <div class="home"><img src="svg/Home filled.svg" alt="Home Image"><h3>경상북도 경주</h3></div>
+              <div class="location"><img src="svg/Location.svg" alt="Location Image"><h3>breadTop1@abc.com</h3></div>
+              <div class="phone"><img src="svg/SmartPhone.svg" alt="Phone Image"><h3>010-1234-5678</h3></div>
+              <div class="telephone"><img src="svg/Telephone.svg" alt="Telephone Image"><h3>031-031-031</h3></div>
+            </div>
+
+
+            <div class="registPhoto">
+              <h2>가게 사진 등록하기</h2>
+              <label for="photoInput" class="photo">
+                <h3 class="photoMent">사진 첨부를 위해 클릭해주세요.</h3>
+              </label>
+              <input type="file" id="photoInput" style="display: none;">
+            </div> 
+            
+            <div class="category-container">
+              <h2>카테고리 선택</h2>
+              <div class="category-selection" onclick="toggleOptions()">분류
+                <span class="arrow-down"></span>
+              </div>
+              <div class="category-options" id="categoryOptions">
+                <div class="category-option" onclick="selectCategory('곡물류')">곡식류</div>
+                <div class="category-option" onclick="selectCategory('면류')">면류</div>
+                <div class="category-option" onclick="selectCategory('과일')">과일</div>
+                <div class="category-option" onclick="selectCategory('한약재')">한약재</div>
+                <div class="category-option" onclick="selectCategory('김치류')">김치류</div>
+                <div class="category-option" onclick="selectCategory('떡류')">떡류</div>
+                <div class="category-option" onclick="selectCategory('차류')">차류</div>
+                <div class="category-option" onclick="selectCategory('발효식품')">발효식품</div>
+                <div class="category-option" onclick="selectCategory('생선과 해산물')">생선과 해산물</div>
+                <div class="category-option" onclick="selectCategory('과자류')">과자류</div>
+              </div>
+            </div>
+          </div>
+
+*/
+/*
+
+.reviewListWrap {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.yesReviewCard {
+  display: flex;
+  flex-direction: row;
+  padding: 15px;
+  border: 1px solid #A0A0A0;
+  border-radius: 10px;
+  margin-bottom: 15px;
+}
+
+.noReviewCard {
+  padding: 15px;
+  border: 1px solid #A0A0A0;
+  margin-bottom: 15px;
+  border-radius: 10px;
+}
+
+.reviewCardTop {
+  display: flex;
+  flex-direction: column;
+}
+
+.reviewStoreName {
+  display: flex;
+  align-items: center;
+}
+
+.reviewStoreName > h3 {
+  cursor: pointer;
+}
+
+.reviewStoreName > img {
+  margin-left: 10px;
+  cursor: pointer;
+}
+
+.reviewStarWrap {
+  display: flex;
+  margin-top: 10px;
+}
+
+.reviewStar {
+  display: flex;
+}
+
+.reviewStarDate {
+  display: flex;
+  margin-left: 15px;
+  font-size: 12px;
+  padding-top: 5px;
+}
+
+.reviewContent {
+  margin-top: 15px;
+}
+
+#storeImg {
+  width: 100%;
+  height: auto; 
+}*/
+
+.new-page {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.tab2Two {
+    width: 1000px;
+    height: 1000px;
+}

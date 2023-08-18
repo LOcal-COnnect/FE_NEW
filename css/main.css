@@ -1,0 +1,271 @@
+@font-face {
+    font-family: 'GmarketSansMedium';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body{
+    margin: 0;
+    position: relative;
+    box-sizing: border-box;
+    font-family: 'GmarketSansMedium';
+}
+
+h3, p{
+    margin: 0;
+}
+
+.mainBanner{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: black;
+    padding: 15px 0;
+}
+
+.mainBannerImg{
+    position: relative;
+}
+
+.mainMap{
+    width: 250px;
+    position: relative;
+}
+
+.mainMapIcon {
+    position: absolute;
+    left: 130px;
+    top: 15px;
+    animation: moveUpDown 2s infinite linear;
+}
+
+@keyframes moveUpDown {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.mainBannerText{
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px;
+}
+
+.mainBannerContent{
+    display: flex;
+}
+
+.orange{
+    color: orange;
+    font-weight: bolder;
+    letter-spacing: 1px;
+    font-size: 30px;
+}
+
+.white{
+    color: white;
+    letter-spacing: 4px;
+    margin-left: 4px;
+    font-size: 30px;
+}
+
+.mainBannerContent > p{
+    color: white;
+    padding-top: 15px;
+    margin-left: 10px;
+}
+
+#margin{
+    margin-right: 10px;
+}
+
+.mainBannerExplain{
+    color: white;
+    margin-top: 15px;
+    font-size: 17px;
+    letter-spacing: 2px;
+    line-height: 30px;
+}
+
+.mainHotTitle{
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hot{
+    margin: 0 5px;
+    color: #FF9900;
+    font-weight: bolder;
+}
+
+.hr{
+    margin: 0 20px;
+    width: 15%;
+    height: 1.5px;
+    background-color: black;
+    border: 0;
+}
+
+.mainHotContent{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+}
+
+.promotionCard {
+    display: flex;
+    align-items: center;
+    border: 1px solid #DCDCDC;
+    padding: 30px 10px;
+    margin: 0 10px;
+    width: 420px;
+    box-shadow: 4px 4px 4px 3px rgb(0, 0, 0, 0.03);
+    cursor: pointer;
+}
+
+.promotionStoreImg{
+    width: 180px;
+    border-radius: 10px;
+}
+
+.promotionStoreInfo{
+    display: flex;
+    margin-left: 15px;
+    flex-direction: column;
+}
+
+.promotionStoreInfo > div{
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+}
+
+.promotionStoreInfoName{
+    display: flex;
+    margin-left: 10px;
+}
+
+.proStoreIcon{
+    width: 40px;
+    height: 40px;
+}
+
+.promotionStoreInfo > p{
+    width: 80%;
+    font-size: 13px;
+    margin-top: 15px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+}
+
+.promotionStoreInfoName{
+    display: flex;
+}
+
+.promotionStoreInfoName > p{
+    width: 100px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    overflow: hidden;
+}
+
+.storeScore{
+    margin-left: 4px;
+    color: #555454;
+    font-size: 12px;
+    padding-top: 4px;
+}
+
+.starWrap{
+    margin-left: 10px;
+}
+
+.morePromotion{
+    cursor: pointer;
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    bottom: 100px;
+    right: 30px;
+    animation: moveUpDown 2s infinite linear;
+}
+
+.mainSearchWrap{
+    display: flex;
+    justify-content: center;
+    margin-top: 70px;
+}
+
+.mainSearchBox{
+    display: flex;
+    margin: 0 30px;
+    flex-direction: column;
+}
+
+.mainSearchBox2{
+    display: flex;
+    margin: 0 30px;
+    flex-direction: column;
+}
+
+.mainSearchBoxTitle{
+    display: flex;
+    align-items: center;
+}
+
+.mainSearchBoxTitle > p{
+    font-weight: bolder;
+}
+
+.mainSearchInput{
+    display: flex;
+}
+
+.mainSearchInput input{
+    width: 250px;
+    border-radius: 10px;
+    border: 1px solid black;
+    padding: 5px 15px;
+}
+
+.mainSearchInput button{
+    width: 50px;
+    margin-left: 5px;
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px 0;
+    cursor: pointer;
+}
+
+.mainSearchWordWrap{
+    display: flex;
+    padding-left: 5px;
+}
+
+.mainSearchButton{
+    background-color: black;
+    color: white;
+    border: 0;
+    border-radius: 10px;
+    padding: 5px 10px;
+    margin-right: 10px;
+    font-size: 15px;
+}
+
+@media(max-width: 768px){
+
+}
