@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>가게 홍보글 작성하기</title>
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/createPromotion.css" />
+    </head>
+    <body>
+        <nav id="navbar"></nav>
+        <div class="container">
+            <div class="containerHeader">
+                <img
+                    src="img/backPage.svg"
+                    onclick="location.href='promotionList.html'"
+                />
+            </div>
+            <div class="containerInputWrap">
+                <input
+                    class="titleInput"
+                    type="text"
+                    placeholder="제목을 입력하세요 (최대 20자)"
+                />
+                <textarea
+                    class="contentInput"
+                    type="text"
+                    placeholder="내용을 입력하세요 (최대 500자)"
+                ></textarea>
+                <div class="pictureInputWrap">
+                    <div class="pictureInputBox">
+                        <input
+                            type="file"
+                            accept="image/*"
+                            onchange="handleImageSelection(event)"
+                        />
+                        <div>사진 첨부를 위해 클릭해주세요.</div>
+                    </div>
+                    <div class="pictureInputBox">
+                        <input
+                            type="file"
+                            accept="image/*"
+                            onchange="handleImageSelection(event)"
+                        />
+                        <div>사진 첨부를 위해 클릭해주세요.</div>
+                    </div>
+                    <div class="pictureInputBox">
+                        <input
+                            type="file"
+                            accept="image/*"
+                            onchange="handleImageSelection(event)"
+                        />
+                        <div>사진 첨부를 위해 클릭해주세요.</div>
+                    </div>
+                </div>
+            </div>
+            <div class="additionalMent">
+                사진은 최대 3장까지 첨부가능합니다.
+            </div>
+            <div class="completeBt" onclick="completeCreatePromotion();">
+                작성완료
+            </div>
+        </div>
+        <script src="js/createPromotion.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>

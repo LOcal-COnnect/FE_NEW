@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>LOCO 멤버 회원가입</title>
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/member.css" />
+        <script src="js/userMypage.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <div class="memberJoinTitle">
+                <img
+                    src="img/backPage.svg"
+                    onclick="location.href='selectJoin.html'"
+                />
+                <h3>회원가입</h3>
+            </div>
+            <div class="memberJoinBody">
+                <p class="memberJoinText">회원정보를 입력해주세요</p>
+                <input id="userId" type="text" placeholder="아이디" />
+                <input id="userPw" type="password" placeholder="비밀번호" />
+                <input id="userEmail" type="text" placeholder="이메일" />
+                <input id="userName" type="text" placeholder="닉네임" />
+                <input id="userPhone" type="text" placeholder="휴대폰 번호" />
+                <label class="selectAddrInput" onclick="searchAddress();">
+                    <input
+                        type="text"
+                        id="roadAddress"
+                        placeholder="지역설정"
+                        readonly
+                    />
+                    <img src="img/selectCity.svg" />
+                </label>
+                <input id="addressDetail" type="text" placeholder="상세주소" />
+                <button
+                    type="button"
+                    class="memberJoinBt"
+                    onclick="memberJoin();"
+                >
+                    LOCO 회원가입
+                </button>
+            </div>
+        </div>
+    </body>
+    <script src="http://dmaps.daum.net/map_js_init/postcode.v2.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="js/searchAddress.js"></script>
+    <script src="js/member.js"></script>
+</html>

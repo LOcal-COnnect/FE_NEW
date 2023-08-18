@@ -1,0 +1,301 @@
+.container {
+    margin: 0 auto 20px auto;
+    padding: 0 10vw;
+    font-family: 'GmarketSansMedium';
+}
+
+@media (max-width: 1000px) {
+    .container {
+        padding: 0 8vw;
+    }
+}
+
+.selectTitle {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.backIcon {
+    position: absolute;
+    cursor: pointer;
+    left: 0;
+    top: 40%;
+}
+
+.selectBody {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    margin-top: 15px;
+}
+
+.selectStore,
+.selectMember {
+    width: calc(40% - 10px);
+    height: 65vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff4e2;
+    border-radius: 20px;
+    cursor: pointer;
+    box-shadow: 1px 1px 2px rgb(0, 0, 0, 0.03);
+}
+
+.selectStore > p,
+.selectMember > p {
+    font-weight: bolder;
+    font-size: 18px;
+    color: #666666;
+}
+
+.selectStore > img,
+.selectMember > img {
+    margin-top: 15px;
+}
+
+.selectStore:hover,
+.selectMember:hover {
+    background-color: #ff9900;
+}
+
+.selectStore:hover img,
+.selectMember:hover img {
+    content: url('../img/selectedStore.svg');
+}
+
+.selectMember:hover img {
+    content: url('../img/selectedMember.svg');
+}
+
+.selectStore:hover p,
+.selectMember:hover p {
+    color: #000000;
+}
+
+input::placeholder {
+    color: #999999;
+}
+
+/*storeJoin.html*/
+.storeJoinTitle {
+    height: 10vh;
+    position: relative;
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+}
+
+.storeJoinTitle > img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.storeJoinBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90vh;
+}
+
+.storeJoinBody > input {
+    width: 40vw;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0.5px solid #999999;
+    margin: 5px 0;
+}
+
+.storeNumCheckInput,
+.selectAddrInput {
+    width: 40vw;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0.5px solid #999999;
+    margin: 5px 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.storeNumCheckInput > input {
+    border: 0;
+    width: calc(100% - 65px);
+}
+
+.selectAddrInput > input {
+    border: 0;
+    width: calc(100% - 30px);
+}
+
+.storeNumCheckInput > button {
+    border: 0;
+    border-radius: 20px;
+    background-color: black;
+    color: white;
+    padding: 2px 5px;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+.storeJoinBt {
+    margin-top: 30px;
+    background-color: black;
+    border: 0;
+    border-radius: 20px;
+    color: white;
+    width: 40vw;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+/*memberJoin.html*/
+.memberJoinTitle {
+    height: 10vh;
+    position: relative;
+    align-items: flex-end;
+    display: flex;
+    justify-content: center;
+}
+
+.memberJoinTitle > img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    cursor: pointer;
+}
+
+.memberJoinBody {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.memberJoinText {
+    margin-bottom: 7px;
+    color: #6f6f6f;
+    width: 40vw;
+    font-size: 12px;
+    text-align: left;
+}
+
+.memberJoinBody > input {
+    width: 40vw;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0.5px solid #999999;
+    margin: 5px 0;
+}
+
+.memberJoinBt {
+    margin-top: 30px;
+    background-color: black;
+    border: 0;
+    border-radius: 20px;
+    color: white;
+    width: 40vw;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+/*로그인 페이지*/
+.loginTitle {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.loginBody {
+    height: calc(50vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.loginBody > h3 {
+    color: #666666;
+    margin-bottom: 20px;
+}
+
+.loginBody > input {
+    width: 40vw;
+    padding: 10px;
+    border-radius: 20px;
+    border: 0.5px solid #999999;
+    margin: 5px 0;
+}
+
+.loginBody > p {
+    width: 40vw;
+    text-align: end;
+    font-size: 12px;
+    text-decoration: underline;
+    cursor: pointer;
+    padding: 5px 10px 0 0;
+    color: #666666;
+}
+.loginBt {
+    margin-top: 30px;
+    background-color: black;
+    border: 0;
+    border-radius: 20px;
+    color: white;
+    width: 40vw;
+    padding: 10px 0;
+    cursor: pointer;
+}
+
+/*비밀번호 찾기 페이지*/
+
+.findTitle {
+    margin-top: 30px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.findBody {
+    height: calc(50vh);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.findBody > h3 {
+    color: #666666;
+    margin-bottom: 10px;
+}
+
+.findBody > input {
+    margin-top: 30px;
+    width: 40vw;
+    padding: 10px;
+    border-radius: 10px;
+    border: 0.5px solid #999999;
+}
+
+.findBody > p {
+    font-size: 11px;
+    color: #999999;
+}
+
+.sendPwBt {
+    margin-top: 15px;
+    background-color: black;
+    border: 0;
+    border-radius: 10px;
+    color: white;
+    width: 40vw;
+    padding: 10px 0;
+    cursor: pointer;
+}

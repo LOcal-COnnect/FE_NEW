@@ -1,0 +1,72 @@
+body {
+    position: absolute;
+    min-width: 768px;
+    width: 1440px;
+    height: 1255px;
+    margin: auto;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.box {
+    width: 400px;
+    padding: 20px;
+    position: absolute;
+    top: 17%;
+}
+input,
+textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    border: 0.5px solid black;
+}
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #000000;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.box input::placeholder {
+    color: #999;
+}
+.box input {
+    padding-left: 20px;
+}
+
+.business-num-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 20px;
+}
+.business-num-container input {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.buttons {
+    margin-top: 20%;
+}
+.certify-button {
+    width: 100px;
+    height: 30px;
+    position: absolute;
+    right: 10px;
+    padding: 0;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}

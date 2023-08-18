@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <title>판매자 회원가입</title>
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/member.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="storeJoinTitle">
+                <img
+                    src="img/backPage.svg"
+                    onclick="location.href='selectJoin.html'"
+                />
+                <h3>회원가입</h3>
+            </div>
+            <div class="storeJoinBody">
+                <input id="storeId" type="text" placeholder="아이디" />
+                <input id="storePw" type="password" placeholder="비밀번호" />
+                <input id="storeEmail" type="text" placeholder="이메일" />
+                <label class="selectAddrInput" onclick="searchAddress();">
+                    <input
+                        type="text"
+                        id="roadAddress"
+                        placeholder="지역설정"
+                        readonly
+                    />
+                    <img src="img/selectCity.svg" />
+                </label>
+                <input id="addressDetail" type="text" placeholder="상세주소" />
+                <input id="storeSellerName" type="text" placeholder="사장님명" />
+                <input
+                    id="sellerNumber"
+                    type="text"
+                    placeholder="전화번호"
+                />
+                <button
+                        type="button"
+                        class="storeJoinBt"
+                        id="joinButton"
+                        onclick="storeJoin();"
+
+                >
+                    LOCO 회원가입
+                </button>
+            </div>
+        </div>
+        <script src="//t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/searchAddress.js"></script>
+        <script src="js/member.js"></script>
+    </body>
+</html>

@@ -1,0 +1,659 @@
+.myTitle {
+    text-align: center;
+    font-size: 19px;
+    font-weight: bolder;
+}
+
+.myTabNav {
+    width: 70vw;
+    margin: 20px auto;
+    border-bottom: 1px solid #dadada;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.myTabNav > div {
+    cursor: pointer;
+    text-align: center;
+    width: calc(33.3% - 50px);
+    padding: 15px 0;
+    color: #d6d6d6;
+    font-weight: bolder;
+}
+
+.myProfile {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
+.myProfile > div {
+    text-align: center;
+    margin-left: 15px;
+}
+
+.myId {
+    margin-top: 10px;
+}
+
+.myInfo {
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto;
+    width: 50vw;
+}
+
+.myInfo > div {
+    display: grid;
+    grid-template-columns: 40px calc(100% - 40px);
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    border: 0;
+    padding: 10px 0 10px 5px;
+    margin: 5px 0;
+}
+
+.myInfo > div > img {
+    margin: 0 auto;
+}
+
+.myBtWrap {
+    display: flex;
+    justify-content: center;
+}
+.moveEditMyBt {
+    width: 20vw;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 0;
+    align-items: center;
+}
+
+#tab1.tab.active,
+#tab2.tab.active,
+#tab3.tab.active {
+    border-bottom: 2px solid #ff9900;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    color: black;
+    justify-content: center;
+}
+
+.tab2 {
+    display: none;
+    width: 60vw;
+    margin: 0 auto;
+    justify-content: center;
+}
+
+.containerInputWrap {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 15px 30px;
+    border-radius: 20px;
+    margin: 0 auto;
+    margin-left: 10px;
+    border: 1px solid #d5d5d5;
+}
+
+.titleInput {
+    padding: 10px 5px;
+    border-bottom: 1px solid #cecece;
+    border-top: 0;
+    border-left: 0;
+    border-right: 0;
+    font-size: 14px;
+}
+
+.contentInput {
+    font-size: 13px;
+    border: 0;
+    height: 300px;
+    padding: 10px 5px;
+    overflow: auto;
+    resize: none;
+    font-family: 'Pretendard-Regular';
+}
+
+.additionalMent {
+    margin-top: 5px;
+    font-size: 12px;
+    color: #7b7b7b;
+    margin-left: 10px;
+}
+
+.completeBt {
+    color: white;
+    background-color: black;
+    border-radius: 20px;
+    padding: 10px 0px;
+    width: 20vw;
+    font-size: 15px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    margin-left: 33%;
+    margin-top: 20%;
+    margin-bottom: 20%;
+}
+
+.pictureInputWrap {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.pictureInputWrap > div {
+    background-color: #f5f5f5;
+    color: #7b7b7b;
+    padding: 30px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 20px;
+    width: calc(33.3% - 5px);
+    font-size: 12px;
+    height: 40vh;
+    line-height: 15px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+}
+
+.pictureInputBox input[type='file'] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+
+#charCount {
+    font-size: 12px;
+    color: #7b7b7b;
+    margin-top: 10px;
+}
+
+.new-page {
+    max-width: 600px;
+    margin: 50px auto;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.new-page h1 {
+    color: #007bff;
+}
+
+.new-page p {
+    line-height: 1.6;
+}
+
+/*내가쓴리뷰 tab3*/
+.tab3 {
+    margin: 0 auto;
+    display: none;
+    /*
+    display: flex;
+    justify-content: center; */
+}
+
+.firstBox {
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+    width: 100vw;
+}
+
+.right {
+    margin-top: 60px;
+}
+
+.ment {
+    display: flex;
+}
+
+.registText1 {
+    font-size: 24px;
+    font-weight: bolder;
+}
+
+.registText2 {
+    font-size: 12px;
+    margin-top: 13px;
+    margin-left: 10px;
+}
+
+.infoAndMenuContainer {
+    margin-top: 20px;
+}
+
+.infoBox {
+    margin-top: 10px;
+    max-width: 483px;
+    flex-wrap: wrap;
+}
+/*
+.home {
+    max-width: 483px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.home2 img {
+    width: 23px;
+    height: 23px;
+    margin-left: 15px;
+    position: relative;
+    top: 6px;
+}
+
+.home2 h3 {
+    margin-top: -12px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+*/
+.location {
+    max-width: 483px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    flex: 1;
+}
+
+.location img {
+    margin-left: 15px;
+    position: relative;
+    top: 7px;
+}
+
+.location h3 {
+    margin-top: -10px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.phone {
+    width: 450px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.phone img {
+    margin-left: 15px;
+}
+
+.phone input{
+    width: 400px;
+    padding: 10px 5px;
+}
+
+.telephone {
+    max-width: 483px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.telephone img {
+    margin-left: 20px;
+    position: relative;
+    top: 8px;
+}
+
+.telephone h3 {
+    margin-top: -10px;
+    margin-left: 50px;
+    font-size: 12px;
+}
+
+.registPhoto {
+    margin-top: 25px;
+}
+
+.registPhoto h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.photo {
+    max-width: 483px;
+    width: 100%;
+    height: 213px;
+    background-color: #ffffff;
+    border: 0.5px solid #999999;
+    border-radius: 30px;
+    margin-bottom: 10px;
+    position: relative;
+}
+
+.registPhoto input {
+    padding-left: 120px;
+    position: relative;
+    align-items: center;
+}
+
+.photoMent {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 12px;
+    color: #999999;
+}
+
+.category-container {
+    position: relative;
+    margin-top: 20px;
+    margin-bottom: 100px;
+}
+
+.category-container h2 {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.category-selection {
+    width: 40%;
+    max-width: 180px;
+    height: 45px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    padding-left: 65px;
+    cursor: pointer;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid black;
+    margin-left: 5px;
+}
+
+.category-options {
+    position: absolute;
+    top: 72px;
+    left: 0;
+    width: 40%;
+    max-width: 180px;
+    background-color: #ffffff;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    display: none;
+}
+
+.category-option {
+    padding: 10px;
+    cursor: pointer;
+    border-bottom: 1px solid #ccc;
+}
+
+.category-option:last-child {
+    border-bottom: none;
+}
+
+.menu {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menuText {
+    display: flex;
+}
+.menu h2 {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.menu h3 {
+    font-size: 10px;
+    margin-top: 12px;
+    margin-left: 10px;
+    color: #7b7b7b;
+}
+
+.plus {
+    font-size: 50px;
+    margin-top: 70px;
+}
+
+.menuShow {
+    width: 164px;
+    height: 187px;
+    background-color: #f5f5f5;
+    border: none;
+    border-radius: 20px;
+    margin-bottom: 10px;
+    margin-top: 2px;
+    margin-right: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.pic {
+    width: 126px;
+    height: 100px;
+    background-color: #e4e4e4;
+    color: #9b9b9b;
+    position: relative;
+    top: 10px;
+    margin: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menuPhotoMent {
+    margin: 10px;
+    font-size: 12px; /* Change the font size to 12px */
+}
+
+.product-info {
+    width: 106px; /* Set the width to 106px */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.product-info input {
+    margin-bottom: 10px;
+    font-size: 12px;
+}
+
+.menu {
+    padding: 15px;
+    border: 0;
+    border-radius: 20px;
+    max-width: 570px;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin: 2px 5px;
+    cursor: pointer;
+}
+
+.menuShowContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.menus {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+    margin: 15px auto;
+    justify-content: space-between;
+}
+
+.introText {
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 24px;
+}
+
+.introduction {
+    width: 100%;
+    max-width: 546px;
+    height: 213px;
+    background-color: #ffffff;
+    border: 0.5px solid black;
+    border-radius: 20px;
+    margin-top: 10px;
+    margin-left: 25px;
+    padding: 15px;
+    position: relative;
+    margin: 0 auto;
+}
+
+.introduction textarea {
+    width: 100%;
+    height: 100%;
+    resize: none;
+    border: none;
+    background-color: transparent;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+#charCount2 {
+    font-size: 12px;
+    color: #7b7b7b;
+    margin-top: 10px;
+}
+
+#charCount2 {
+    position: absolute;
+    bottom: -25px;
+    right: 0;
+    font-size: 12px;
+    color: #999;
+}
+
+.makeButton {
+    width: 100%;
+    max-width: 546px;
+    margin: 0 auto;
+    position: relative;
+}
+
+.makeButton::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+.register-button {
+    display: flex;
+    justify-content: center;
+    margin-right: 300px;
+}
+
+.register {
+    width: 25vw;
+    background-color: black;
+    color: white;
+    border-radius: 20px;
+    border: 0;
+    font-size: 15px;
+    cursor: pointer;
+    padding: 10px 0;
+}
+
+.pic {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #d7d7d7;
+    cursor: pointer;
+}
+
+.pic img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.pictureInputWrap {
+    margin-top: 10px;
+    width: 200px;
+    height: 100%;
+    max-width: 100%;
+}
+
+.pictureInputWrap > div {
+    background-color: #dbdbdb;
+    color: #7b7b7b;
+    padding: 30px;
+    cursor: pointer;
+    border: 0;
+    border-radius: 0px;
+    width: 80%;
+    font-size: 12px;
+    height: 95%;
+    line-height: 15px;
+    position: relative;
+    overflow: hidden;
+    background-size: cover;
+    margin-left: 16px;
+}
+
+.pictureInputBox input[type='file'] {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    display: flex;
+}
+
+#photoPreview {
+    max-width: 95%;
+    height: 95%;
+    margin-top: 5px;
+    margin-left: 10px;
+    border-radius: 20px;
+}

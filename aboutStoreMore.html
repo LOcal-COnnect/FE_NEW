@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link type="text/css" rel="stylesheet" href="css/aboutStoreMore.css" />
+    <link rel="stylesheet" href="css/index.css" />
+</script> 
+    <title>가게 소개 페이지(리뷰 포함)</title>
+</head>
+
+<body>
+    <div class="mainNav">
+    <div class="mainNavIcon">
+        <img class="categoryBtn" id="categoryButton" src="img/hamburger.svg" onClick="toggleHiddenCategory();" />
+        <img class="mainLogo" src="img/mainLoco.svg" onclick="location.href='index.html'" />
+    </div>
+    <div class="mainProfile">
+        <p class="loginBtn" onclick="location.href='login.html'">로그인</p>
+        <p class="signupBtn" onclick="location.href='selectJoin.html'">회원가입</p>
+        <p class="mainProfileName">감미로운 옹징어</p>
+        <p class="mainProfileText">님</p>
+        <div class="profileContainer">
+            <img class="mainProfileImg" src="img/MyPageButton.svg" />
+            <div class="myProfileMore">
+                <p onClick="location.href='userMypage.html'">마이페이지</p>
+                <hr />
+                <p onClick="logout();">로그아웃</p>웃
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container2">
+    <div class="backg"></div>
+
+    <div class="top">
+        <div class="intop">
+            <div class="parent-container">
+                <div id="home">
+                    <h3>
+                        <img
+                            src="svg/Home filled.svg"
+                            alt="Home Image"
+                        />빵빵빵
+                    </h3>
+                </div>
+                <div id="storePhoto">
+                    <img
+                        src="svg/storePhoto.svg"
+                        alt="storePhoto Image"
+                        class="storePhotoImg"
+                    />
+                </div>
+                <!--가게 대표사진-->
+                <div class="heartOut">
+                    <img
+                        src="svg/icon _heart outline_.svg"
+                        alt="Heart Outline Image"
+                    />
+                    <h3>찜하기</h3>
+                </div>
+            </div>
+
+            <div class="info">
+                <div class="infoTop">
+                    <div class="infoBox">
+                        <!--대표사진 옆 가게 위치, 이메일, 번호, 사업자번호 정보-->
+                        <div class="boxin">
+                            <img
+                                src="svg/Location.svg"
+                                alt="Location Image"
+                            />
+                            <h3>경상북도 경주</h3>
+                        </div>
+                        <div class="boxin">
+                            <img
+                                src="svg/Message.svg"
+                                alt="Email Image"
+                            />
+                            <h3>breadTop1@abc.com</h3>
+                        </div>
+                        <div class="boxin">
+                            <img
+                                src="svg/SmartPhone.svg"
+                                alt="Phone Image"
+                            />
+                            <h3>010-1234-5678</h3>
+                        </div>
+                        <div class="boxin">
+                            <img
+                                src="svg/Telephone.svg"
+                                alt="Telephone Image"
+                            />
+                            <h3>031-031-031</h3>
+                        </div>
+                        <div class="boxin">
+                            <img
+                                src="svg/Person.svg"
+                                alt="Number Image"
+                            />
+                            <h3>56431353</h3>
+                        </div>
+                    </div>
+                    <div class="rating">
+                        <div class="heartStar">
+                            <img
+                                src="svg/icon _heart_.svg"
+                                alt="Heart Image"
+                            />
+                            <h3>찜한 개수</h3>
+                            <h3>00</h3>
+                        </div>
+                        <div class="heartStar">
+                            <img
+                                src="svg/icon _star_.svg"
+                                alt="Star Image"
+                            />
+                            <h3>평점</h3>
+                            <h3>0.0</h3>
+                        </div>
+                        <div class="Hashtage">
+                            <div class="HashtagBox">
+                                <h3>#곡물류</h3>
+                            </div>
+                            <div class="HashtagBox"><h3>#쌀류</h3></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="introduction">
+                    <h2>가게 소개</h2>
+                    <div class="introBox">
+                        <h3 class="introScript">
+                            경주에서 50년된 빵집입니다~다양하고 맛있는
+                            빵 있습니다. 경주에서 50년된
+                            빵집입니다~다양하고 맛있는 빵 있습니다.
+                            경주에서 50년된 빵집입니다~다양하고 맛있는
+                            빵 있습니다. 경주에서 50년된
+                            빵집입니다~다양하고 맛있는 빵 있습니다.
+                            경주에서 50년된 빵집입니다~다양하고 맛있는
+                            빵 있습니 다. 경주에서 50년된
+                            빵집입니다~다양하고 맛있는 빵 있습니다.
+                            경주에서 50년된 빵집입니다~다양하고 맛있는
+                            빵 있습니다. 경주에서 50년된
+                            빵집입니다~다양하고 맛있는 빵 있습니다.
+                            경주에서 50년된 빵집입니다~다양하고 맛있는
+                            빵 있습니다. 경주에서 50년된
+                            빵집입니다~다양하고 맛있는 빵 있습니다.
+                            경주에서 50년된 빵집입니다~다양하고 맛있는
+                            빵 있습니 다. 경주에서 50년된
+                            빵집입니다~다양하고 맛있는 빵 있습니다.
+                        </h3>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <div class="middle">
+        <div class="middleTop">
+            <h2 class="middleText">구매자 리뷰</h2>
+            <div class="modify" onclick="modifyButton()"><a href="#"><h3>작성하기</h3></a></div>
+        </div>
+        <div class="middleLine"></div>
+    </div>
+    
+    <div class="reviews">
+        <div class="review-box"></div>
+    </div>
+    
+    <div id="buttonContainer"></div>
+
+</div>
+
+<div class="footer">
+    <div class="footerLeft">
+        <img id="footerLogo" src="img/mainLogo1.svg" />
+        <div>
+            <div>
+                <p class="department">PM</p>
+                <p class="peopleList">이혜미</p>
+            </div>
+            <div>
+                <p class="department">FE</p>
+                <p class="peopleListFE">이혜린, 이윤호, 장수진</p>
+            </div>
+            <div>
+                <p class="department">BE</p>
+                <p class="peopleListBE">김현우, 박선균</p>
+            </div>
+        </div>
+    </div>
+    <div class="footerRight">
+        <img src="img/lioiin.png" />
+        <p>
+            상명대학교 멋쟁이 사자처럼 11기<br />
+            Instagram @likelion_smu
+        </p>
+    </div>
+</div>
+      
+
+
+        
+    <script src="js\index.js"></script>
+    <script src="js/aboutStoreMore.js"></script>
+</body>
+</html>

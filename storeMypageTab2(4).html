@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
+        <link
+            rel="stylesheet"
+            href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css"
+            integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+            crossorigin="anonymous"
+        />
+        <link
+            type="text/css"
+            rel="stylesheet"
+            href="css/storeMypageTab2(4).css"
+        />
+        <!--    <link rel="stylesheet" href="css/index.css" />-->
+        <title>가게 마이페이지(3)</title>
+    </head>
+
+    <body>
+        <nav id="navbar"></nav>
+        <div class="container" id="myTabContent">
+            <div class="myTitle">마이 페이지</div>
+            <div class="myTabNav">
+                <div id="tab1" class="tab">내 정보</div>
+                <div id="tab2" class="tab active">가게 홍보</div>
+                <div id="tab3" class="tab">가게 등록</div>
+            </div>
+            <div class="tab1">
+                <div class="myInfo">
+                    <div>
+                        <img src="..\svg\Location.svg" />
+                        <div>서울특별시</div>
+                    </div>
+                    <div>
+                        <img src="..\svg\Location.svg" />
+                        <div>어쩌고저쩌고</div>
+                    </div>
+                    <div>
+                        <img src="..\svg\Home filled.svg" />
+                        <div>가게명</div>
+                    </div>
+                    <div>
+                        <img src="..\svg\person.svg" />
+                        <div>id123</div>
+                    </div>
+                    <div>
+                        <img src="..\svg\pw.svg" />
+                        <div>imapassword</div>
+                    </div>
+                    <div>
+                        <img src="..\svg\Message.svg" />
+                        <div>abcd@gmail.com</div>
+                    </div>
+                    <div>
+                        <img src="..\svg\SmartPhone.svg" />
+                        <div>010-1234-5678</div>
+                    </div>
+
+                    <div>
+                        <img src="..\svg\Telephone.svg" />
+                        <div>02-1234-456</div>
+                    </div>
+                    <div>
+                        <img src="..\svg\Star.svg" />
+                        <div>123-456-789</div>
+                    </div>
+                </div>
+                <div class="myBtWrap">
+                    <button class="moveEditMyBt" type="button">
+                        내 정보 수정하기
+                    </button>
+                </div>
+            </div>
+
+            <div class="tab2 active" id="tab2 active">
+                <div class="tab2One">
+                    <div class="containerInputWrap">
+                        <input
+                            class="titleInput"
+                            type="text"
+                            placeholder="제목을 입력하세요 (최대 20자)"
+                            maxlength="20"
+                        />
+                        <textarea class="contentInput">
+우리 가게 최고 OOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOOo </textarea
+                        >
+
+                        <div class="pictureInputWrap">
+                            <div class="pictureInputBox">
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    onchange="handleImageSelection(event)"
+                                />
+                                <div>사진 첨부를 위해 클릭해주세요.</div>
+                            </div>
+                            <div class="pictureInputBox">
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    onchange="handleImageSelection(event)"
+                                />
+                                <div>사진 첨부를 위해 클릭해주세요.</div>
+                            </div>
+                            <div class="pictureInputBox">
+                                <input
+                                    type="file"
+                                    accept="image/*"
+                                    onchange="handleImageSelection(event)"
+                                />
+                                <div>사진 첨부를 위해 클릭해주세요.</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div
+                        class="completeBt"
+                        onclick="completeCreatePromotion();"
+                    >
+                        수정 완료
+                    </div>
+                </div>
+            </div>
+
+            <div class="tab3">
+                <div class="firstBox">
+                    <div class="regist">
+                        <div class="ment">
+                            <h2 class="registText1">우리 가게를 등록하세요!</h2>
+                            <h3 class="registText2">
+                                소비자들에게 공개되는 페이지이므로, 예쁘게
+                                꾸며주세요
+                            </h3>
+                        </div>
+
+                        <!--가게명, 위치+상세위치, 전화번호, 가게 전화번호-->
+                        <div class="infoAndMenuContainer">
+                            <div class="infoBox">
+                                <div class="phone">
+                                    <img
+                                        src="svg/Home filled.svg"
+                                        alt="Home Image"
+                                    />
+                                    <h3>경상북도 경주</h3>
+                                </div>
+                                <div class="phone">
+                                    <img
+                                        src="svg/Location.svg"
+                                        alt="Location Image"
+                                    />
+                                    <h3>breadTop1@abc.com</h3>
+                                </div>
+                                <div class="phone">
+                                    <img
+                                        src="svg/SmartPhone.svg"
+                                        alt="Phone Image"
+                                    />
+                                    <h3>010-1234-5678</h3>
+                                </div>
+                                <div class="phone">
+                                    <img
+                                        src="svg/Telephone.svg"
+                                        alt="Telephone Image"
+                                    />
+                                    <h3>031-031-031</h3>
+                                </div>
+                            </div>
+
+                            <div class="registPhoto">
+                                <h2>가게 사진 등록하기</h2>
+                                <label for="photoInput" class="photo">
+                                    <h3 class="photoMent">
+                                        사진 첨부를 위해 클릭해주세요.
+                                    </h3>
+                                </label>
+                                <input
+                                    type="file"
+                                    id="photoInput"
+                                    style="display: none"
+                                />
+                            </div>
+
+                            <div class="category-container">
+                                <h2>카테고리 선택</h2>
+                                <div
+                                    class="category-selection"
+                                    onclick="toggleOptions()"
+                                >
+                                    분류
+                                    <span class="arrow-down"></span>
+                                </div>
+                                <div
+                                    class="category-options"
+                                    id="categoryOptions"
+                                >
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('곡물류')"
+                                    >
+                                        곡식류
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('면류')"
+                                    >
+                                        면류
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('과일')"
+                                    >
+                                        과일
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('한약재')"
+                                    >
+                                        한약재
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('김치류')"
+                                    >
+                                        김치류
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('떡류')"
+                                    >
+                                        떡류
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('차류')"
+                                    >
+                                        차류
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('발효식품')"
+                                    >
+                                        발효식품
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('생선과 해산물')"
+                                    >
+                                        생선과 해산물
+                                    </div>
+                                    <div
+                                        class="category-option"
+                                        onclick="selectCategory('과자류')"
+                                    >
+                                        과자류
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="secondBox">
+                        <div class="forButton">
+                            <div class="right">
+                                <div class="menu">
+                                    <div class="menuText">
+                                        <h2>가게 메뉴</h2>
+                                        <h3>
+                                            가게 메뉴는 최대 10개까지 등록
+                                            가능합니다.
+                                        </h3>
+                                    </div>
+                                    <div class="menus">
+                                        <div class="menuShow">
+                                            <div class="pic">
+                                                <label
+                                                    for="menuPhotoInput"
+                                                    class="menuPhoto"
+                                                >
+                                                    <h3 class="menuPhotoMent">
+                                                        사진첨부를 위해
+                                                        클릭해주세요.
+                                                    </h3>
+                                                </label>
+                                            </div>
+                                            <div class="product-info">
+                                                <input
+                                                    type="text"
+                                                    placeholder="상품명"
+                                                />
+                                                <input
+                                                    type="text"
+                                                    placeholder="가격"
+                                                />
+                                            </div>
+                                            <input
+                                                type="file"
+                                                id="menuPhotoInput"
+                                                style="display: none"
+                                            />
+                                        </div>
+
+                                        <div class="menuShow">
+                                            <div class="pic">
+                                                <label
+                                                    for="menuPhotoInput"
+                                                    class="menuPhoto"
+                                                >
+                                                    <h3 class="menuPhotoMent">
+                                                        사진첨부를 위해
+                                                        클릭해주세요.
+                                                    </h3>
+                                                </label>
+                                            </div>
+                                            <div class="product-info">
+                                                <input
+                                                    type="text"
+                                                    placeholder="상품명"
+                                                />
+                                                <input
+                                                    type="text"
+                                                    placeholder="가격"
+                                                />
+                                            </div>
+                                            <input
+                                                type="file"
+                                                id="menuPhotoInput"
+                                                style="display: none"
+                                            />
+                                        </div>
+
+                                        <div class="menuShow">
+                                            <div class="pic">
+                                                <label
+                                                    for="menuPhotoInput"
+                                                    class="menuPhoto"
+                                                >
+                                                    <h3 class="menuPhotoMent">
+                                                        사진첨부를 위해
+                                                        클릭해주세요.
+                                                    </h3>
+                                                </label>
+                                            </div>
+                                            <div class="product-info">
+                                                <input
+                                                    type="text"
+                                                    placeholder="상품명"
+                                                />
+                                                <input
+                                                    type="text"
+                                                    placeholder="가격"
+                                                />
+                                            </div>
+                                            <input
+                                                type="file"
+                                                id="menuPhotoInput"
+                                                style="display: none"
+                                            />
+                                        </div>
+
+                                        <div class="menuShow">
+                                            <div class="pic">
+                                                <label
+                                                    for="menuPhotoInput"
+                                                    class="menuPhoto"
+                                                >
+                                                    <h3 class="menuPhotoMent">
+                                                        사진첨부를 위해
+                                                        클릭해주세요.
+                                                    </h3>
+                                                </label>
+                                            </div>
+                                            <div class="product-info">
+                                                <input
+                                                    type="text"
+                                                    placeholder="상품명"
+                                                />
+                                                <input
+                                                    type="text"
+                                                    placeholder="가격"
+                                                />
+                                            </div>
+                                            <input
+                                                type="file"
+                                                id="menuPhotoInput"
+                                                style="display: none"
+                                            />
+                                        </div>
+
+                                        <div class="menuShow">
+                                            <div class="pic">
+                                                <label
+                                                    for="menuPhotoInput"
+                                                    class="menuPhoto"
+                                                >
+                                                    <h3 class="menuPhotoMent">
+                                                        사진첨부를 위해
+                                                        클릭해주세요.
+                                                    </h3>
+                                                </label>
+                                            </div>
+                                            <div class="product-info">
+                                                <input
+                                                    type="text"
+                                                    placeholder="상품명"
+                                                />
+                                                <input
+                                                    type="text"
+                                                    placeholder="가격"
+                                                />
+                                            </div>
+                                            <input
+                                                type="file"
+                                                id="menuPhotoInput"
+                                                style="display: none"
+                                            />
+                                        </div>
+
+                                        <div class="menuShow">
+                                            <h2 class="plus">+</h2>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <h2 class="introText">가게 소개글 작성하기</h2>
+                                <div class="introduction">
+                                    <textarea
+                                        id="introductionText2"
+                                        placeholder="1000자 이내"
+                                    ></textarea>
+                                    <div id="charCount2">0 / 1000</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="register-button">
+                    <button id="registerButton" class="register" type="button">
+                        점포 등록
+                    </button>
+                </div>
+            </div>
+
+            <div class="tap2Next"></div>
+        </div>
+
+        <script src="js\index.js"></script>
+        <script src="js\storeMypageTab2(4).js"></script>
+    </body>
+</html>

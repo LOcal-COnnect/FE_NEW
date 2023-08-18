@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta
+            name="viewport"
+            content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+        />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>로그인 페이지</title>
+        <link rel="stylesheet" href="css/index.css" />
+        <link rel="stylesheet" href="css/member.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="loginTitle">
+                <img class="backIcon" src="img/backPage.svg" onclick="location.href='index.html'"/>
+                <img src="img/logo.svg"/>
+            </div>
+            <div class="loginBody">
+                <h3>로그인</h3>
+                <input id="userId" type="text" placeholder="아이디" />
+                <input id="userPw" type="password" placeholder="비밀번호" />
+                <p onclick="location.href='findPw.html'">비밀번호 찾기</p>
+                <button class="loginBt" type="button" onclick="login();">
+                    LOCO 로그인
+                </button>
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/member.js"></script>
+    </body>
+</html>
