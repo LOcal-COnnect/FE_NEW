@@ -1,7 +1,7 @@
-var userIdx = 1
 
 var userInfo = JSON.parse(localStorage.getItem('user'))
 var token = localStorage.getItem('token')
+
 
 window.onload = function () {
     var urlParams = new URLSearchParams(window.location.search)
@@ -230,44 +230,6 @@ function generateStarRating(rating) {
     return starRatingContainer
 }
 
-const reviews = [
-    {
-        storeIdx: 1,
-        storeName: '강남구고기짱',
-        reviewer: 'test',
-        review: {
-            createdAt: '2023-08-17T01:27:41.029339',
-            updatedAt: null,
-            reviewIdx: 1,
-            reviewContent: 'test',
-            reviewStar: 3,
-        },
-    },
-    {
-        storeIdx: 1,
-        storeName: '강남구고기짱',
-        reviewer: 'test',
-        review: {
-            createdAt: '2023-08-17T01:27:50.478057',
-            updatedAt: null,
-            reviewIdx: 2,
-            reviewContent: '쵝오',
-            reviewStar: 4,
-        },
-    },
-    {
-        storeIdx: 1,
-        storeName: '강남구고기짱',
-        reviewer: 'asd',
-        review: {
-            createdAt: '2023-08-17T01:30:45.856244',
-            updatedAt: null,
-            reviewIdx: 3,
-            reviewContent: '별로',
-            reviewStar: 1,
-        },
-    },
-]
 
 function addReview(review) {
     const reviewBox = document.querySelector('.review-box')
@@ -383,4 +345,3 @@ function initialize() {
 // 페이지 로드 시 초기화 함수 실행
 window.addEventListener('load', initialize)
 
-console.log(displayReviews(reviews))
