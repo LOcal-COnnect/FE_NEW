@@ -82,9 +82,6 @@ document.querySelector('.completeBt').addEventListener('click', function () {
 })
 
 function completeUpdateReview() {
-    const reviewIdx = 1
-    const storeIdx = 789
-    const userIdx = 456
 
     const content = document.querySelector('.contentInput').value
     const rating = parseFloat(
