@@ -315,7 +315,6 @@ document.addEventListener('DOMContentLoaded', function () {
 // 댓글 조회 ajax
 var token = localStorage.getItem('token')
 document.addEventListener('DOMContentLoaded', function () {
-    const promotionIdx = 123
 
     function getComments(promotionIdx) {
         return new Promise((resolve, reject) => {
@@ -417,7 +416,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             saveButton.addEventListener('click', function () {
                 const updatedContent = inputField.value
-                const commentIdx = 1
 
                 console.log(updatedContent)
                 console.log(commentIdx)
@@ -486,7 +484,7 @@ document.addEventListener('DOMContentLoaded', function () {
             const commentItem = deleteButton.closest('.commentItem')
             /*
             const commentIdx = commentItem.dataset.commentId */
-            const commentIdx = 1
+
 
             deleteComment(commentIdx)
                 .then(() => {

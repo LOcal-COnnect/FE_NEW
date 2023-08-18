@@ -120,8 +120,6 @@ function completeCreateReview(storeIdx, userIdx) {
     })
 }
 
-const storeIdx = 789
-const userIdx = 456
 
 document.querySelector('.completeBt').addEventListener('click', function () {
     completeCreateReview(storeIdx, userIdx)
