@@ -1,4 +1,4 @@
-var host = 'localhost:3000'
+var host = '43.200.4.52:8080'
 var userIdx = 1
 
 window.onload = function () {
